@@ -1,9 +1,9 @@
 {
-  "name": "kevink.dev",
+  "name": "strueker.dev",
   "version": "1.0.0",
   "private": true,
-  "description": "KevinK.dev",
-  "author": "Kevin Kandlbinder",
+  "description": "strueker.dev",
+  "author": "Timo Strüker",
   "keywords": [
     "gatsby"
   ],

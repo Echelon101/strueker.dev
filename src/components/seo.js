@@ -67,7 +67,7 @@ function SEO({ description, meta, title }) {
     >
         <script src="https://kit.fontawesome.com/1377f925e0.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Roboto&display=swap" rel="stylesheet"/> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
     </Helmet>
   )
 }

@@ -1,14 +1,14 @@
 module.exports = {
-    "siteName": "KevinK.dev",
-    "siteAuthor": "@Unkn0wnKevin",
-    "siteURL": "https://kevink.dev",
-    "payPalMail": "kevin@1in9.net",
-    "siteKeywords": "Kevin Kandlbinder, Kevin, Kandlbinder, Web, Web Developer, Developer, JavaScript, PHP, Java, Photos, Fotos",
+    "siteName": "Strueker.dev",
+    "siteAuthor": "@timomrx",
+    "siteURL": "https://strueker.dev",
+    "payPalMail": "example@example.com",
+    "siteKeywords": "Timo Strüker, Timo, Strüker, IT, System Administrator, Developer, PHP, Java, C#",
     "iconPath": "src/images/fullbglogo@10x.png",
     "languages": ["en", "de"],
-    "contactEmail": "kevin@kevink.dev",
-    "contactPhone": "+4941068068004",
-    "mapsLink": "https://goo.gl/maps/KVq9z1PVaVP2",
-    "contactTwitter": "Unkn0wnKevin",
-    "contactGitHub": "Unkn0wnCat"
+    "contactEmail": "developer@strueker.dev",
+    "contactPhone": "+4900000000",
+    "mapsLink": "https://goo.gl/maps/QATNq9VwMXnd2FwL6",
+    "contactTwitter": "timomrx",
+    "contactGitHub": "Echelon101"
 };
