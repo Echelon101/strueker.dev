@@ -16,7 +16,7 @@ class Layout extends React.Component {
                 <div id="content" role="main">
                     {this.props.children}
                 </div>
-                <footer role="contentinfo">&copy; Timo Strüker, <Link to="/legal/about" class="spf-link"><Trans i18nKey="imprint">Imprint</Trans></Link> | <Link to="/legal/datasec" class="spf-link"><Trans i18nKey="datasec">Data Protection</Trans></Link> | <Link to="/legal/disclaimer" class="spf-link"><Trans i18nKey="disclaimer">Disclaimer</Trans></Link> | <a href="#languageChooser">Language</a></footer>
+                <footer role="contentinfo">&copy; Timo Strüker, <Link to="/legal/about" class="spf-link"><Trans i18nKey="imprint">Imprint</Trans></Link> | <Link to="/legal/datasec" class="spf-link"><Trans i18nKey="datasec">Data Protection</Trans></Link> | <Link to="/legal/disclaimer" class="spf-link"><Trans i18nKey="disclaimer">Disclaimer</Trans></Link> | <Trans i18nKey="creatorAttribution">This website was designed by</Trans> <a href="https://kevink.dev" target="_blank">Kevin Kandlbinder</a> | <a href="#languageChooser">Language</a></footer>
                 <div class="languageModal" id="languageChooser">
                     <LanguageSwitcher />
                 </div>
