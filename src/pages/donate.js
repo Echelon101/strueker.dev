@@ -5,8 +5,6 @@ import { Trans, Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18
 
 import styles from "./donate.module.scss";
 
-import logo from "../images/roundedbglogo@10x.png";
-
 export default function DonatePage() {
     const [amount, setAmount] = useState(5);
     const {t} = useI18next();
