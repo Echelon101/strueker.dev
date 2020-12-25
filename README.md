@@ -1,2 +1,2 @@
-# KevinK.dev.js
-> KevinK.dev, my personal site, now on Gatsby.
+# Strueker.dev
+> Strueker.dev, my personal site, now on Gatsby.

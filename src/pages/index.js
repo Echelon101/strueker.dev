@@ -29,11 +29,11 @@ class IndexPage extends React.Component {
       <Layout title="Timo Strüker" module="home">
         <section className={styles.heroSection}>
           <div className={styles.profile + " profile"}>
-            <div data-bg="url(https://cdn.kevink.dev/images/kevin/kevin-kandlbinder-03.jpg)" style={{backgroundImage: "url(https://cdn.kevink.dev/images/kevin/kevin-kandlbinder-03.jpg)"}} className={styles.profileImage + " lazy"}></div>
+            <div style={{backgroundImage: "url(https://cdn.kevink.dev/assets/friends/timo.jpg)"}} className={styles.profileImage + " lazy"}></div>
             <div className={styles.profileImageDummy}></div>
             <div className={styles.profileCard}>
               <span className={styles.hello}><Trans>homeHello</Trans></span>
-              <span className={styles.name}>Kevin Kandlbinder</span>
+              <span className={styles.name}>Timo Strüker</span>
               <span className={styles.description}><Trans>homeMe</Trans> <span id="descriptionType"><Trans>homeWebDeveloper</Trans></span>.</span>
   
               <div className={styles.contactLinks}>
@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
             <p><Trans>homeAboutMeHello</Trans><br/><Trans>homeAboutMeText</Trans></p>
           </article>
         </section>
-        <a className={styles.section + " " + styles.creditSection} href="https://unsplash.com/@jannikkiel" target="_blank" rel="noopener">
+        <a className={styles.section + " " + styles.creditSection} href="https://unsplash.com/@unkn0wncat" target="_blank" rel="noopener">
           <div>
             <span><i className="fas fa-fw fa-camera"></i> <Trans>homeImageCredit</Trans></span>
             <i className="fas fa-fw fa-chevron-right"></i>

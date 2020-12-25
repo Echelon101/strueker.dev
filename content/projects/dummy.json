@@ -1,0 +1,12 @@
+{
+    "urlname": "mock",
+    "lang": "mock",
+    "name": "",
+    "shortDescription": "",
+    "longDescription": "",
+    "links": {
+        "website": "",
+        "github": ""
+    },
+    "image": "../images/test.jpg"
+}

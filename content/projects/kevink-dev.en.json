@@ -1,12 +1,12 @@
 {
-    "urlname": "kevink-dev",
+    "urlname": "strueker-dev",
     "lang": "en",
-    "name": "KevinK.dev",
+    "name": "Strueker.dev",
     "shortDescription": "This site and the code behind the scenes.",
-    "longDescription": "For as long as I've been poking around the internet I've always been facinated by the idea to have my own website. This is why I've created this site to showcase myself and my projects. If you are interested in the code behind the scenes feel free to look at it on GitHub!",
+    "longDescription": null,
     "links": {
-        "website": "https://kevink.dev",
-        "github": "https://github.com/Unkn0wnCat/KevinK.dev.js"
+        "website": "https://strueker.dev",
+        "github": null
     },
-    "image": "../images/KevinK.dev.png"
+    "image": "../images/test.jpg"
 }
