@@ -7,7 +7,8 @@
     min-height: 500px;
     padding-top: 100px;
     overflow: hidden;
-    background: radial-gradient(ellipse at top left, #1f0ba659, transparent), radial-gradient(ellipse at bottom right, #4a086829, transparent);
+    //background: radial-gradient(ellipse at top left, #1f0ba659, transparent), radial-gradient(ellipse at bottom right, #4a086829, transparent);
+    background: radial-gradient(ellipse at top left,rgba(#3a5abc, .2313),transparent), radial-gradient(ellipse at bottom right,rgba(#071480, .1137),transparent);
 
     @media(pointer: coarse), (pointer: none) {
         min-height: 700px;
@@ -82,7 +83,7 @@
             transform: translate(40px, 20px);
             border-radius: 5px;
             /*box-shadow: -1px 11px 33px -10px rgba(127,127,127,0.4);*/
-            box-shadow: -1px 11px 33px -10px #e5502b4b;
+            box-shadow: -1px 11px 33px -10px #2b6fe5;
             padding: 20px 20px 20px 230px;
             color: $textColor;
         }

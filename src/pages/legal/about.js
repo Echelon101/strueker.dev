@@ -11,14 +11,14 @@ export default function ImprintPage() {
                 <article>
                     <h1><Trans>imprint</Trans></h1>
 
-                    <p>Angaben gemäß § 5 TMG</p><p>Kevin Kandlbinder<br/>
-                    Eichenweg 48<br/>
+                    <p>Angaben gemäß § 5 TMG</p><p>Timo Strüker<br/>
+                    Danziger Str. 50<br/>
                     25451 Quickborn <br/>
                     </p><p> <strong>Vertreten durch: </strong><br/>
-                    Kevin Kandlbinder<br/>
+                    Timo Strüker<br/>
                     </p><p><strong>Kontakt:</strong> <br/>
                     Telefon: +49 4106 8068004<br/>
-                    E-Mail: <a href='mailto:contact@kevink.dev'>contact@kevink.dev</a><br/></p>
+                    E-Mail: <a href='mailto:developer@strueker.net'>developer@strueker.net</a><br/></p>
                 </article>
             </section>
         </Layout>

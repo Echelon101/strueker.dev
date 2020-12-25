@@ -13,13 +13,13 @@ export default function DataSecPage() {
 
                     <h3 id="dsg-general-intro"></h3><p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). <br/>
                 <br/>
-            </p><h3 id="dsg-general-controller">Verantwortlicher</h3><p><span class="tsmcontroller">Kevin Kandlbinder<br/>
-Eichenweg 48<br/>
+            </p><h3 id="dsg-general-controller">Verantwortlicher</h3><p><span class="tsmcontroller">Timo Strüker<br/>
+Danziger Str. 50<br/>
 25451 Quickborn<br/>
 Deutschland<br/>
 <br/>
-E-Mail: contact@kevink.dev<br/>
-Impressum: https://kevink.dev/legal/about</span></p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3><p>-	Bestandsdaten (z.B., Personen-Stammdaten, Namen oder Adressen).<br/>
+E-Mail: developer@strueker.net<br/>
+Impressum: https://strueker.dev/legal/about</span></p><h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3><p>-	Bestandsdaten (z.B., Personen-Stammdaten, Namen oder Adressen).<br/>
                 -	Kontaktdaten (z.B., E-Mail, Telefonnummern).<br/>
                 -	Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos).<br/>
                 -	Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).<br/>

@@ -1,0 +1,12 @@
+{
+    "urlname": "commandblock",
+    "lang": "de",
+    "name": "CommandBlock",
+    "shortDescription": "Minecraft Marketplace Managed IT Dienstleistungen",
+    "longDescription": "",
+    "links": {
+        "website": "",
+        "github": ""
+    },
+    "image": "../images/test.jpg"
+}
