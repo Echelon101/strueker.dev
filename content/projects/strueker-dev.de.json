@@ -8,5 +8,6 @@
         "website": "https://strueker.dev",
         "github": null
     },
-    "image": "../images/test.jpg"
+    "image": "../images/test.jpg",
+    "featured": 1
 }

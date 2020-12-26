@@ -8,5 +8,6 @@
         "website": null,
         "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
     },
-    "image": "../images/test.jpg"
+    "image": "../images/test.jpg",
+    "featured": 2
 }

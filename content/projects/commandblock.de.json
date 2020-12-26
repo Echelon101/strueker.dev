@@ -8,5 +8,6 @@
         "website": null,
         "github": null
     },
-    "image": "../images/test.jpg"
+    "image": "../images/test.jpg",
+    "featured": 0
 }
