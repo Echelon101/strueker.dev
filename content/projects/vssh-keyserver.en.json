@@ -1,6 +1,6 @@
 {
     "urlname": "vssh-keyserver",
-    "lang": "de",
+    "lang": "en",
     "name": "VSSH Keyserver",
     "shortDescription": "Central hosting of SSH keys",
     "longDescription": "System to create and manage SSH keys online.",
