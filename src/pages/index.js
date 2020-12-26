@@ -3,6 +3,7 @@ import Layout from "../layouts/default"
 
 import styles from "./index.module.scss"
 import projectStyles from "./projects.module.scss"
+import profileImage from "../images/timo.jpg"
 
 import { Trans, Link } from "gatsby-plugin-react-i18next"
 import {graphql} from "gatsby";
@@ -46,7 +47,7 @@ class IndexPage extends React.Component {
       <Layout title="Timo Strüker" module="home" transparentTopbar={true}>
         <section className={styles.heroSection}>
           <div className={styles.profile + " profile"}>
-            <div style={{backgroundImage: "url(https://cdn.kevink.dev/assets/friends/timo.jpg)"}} className={styles.profileImage + " lazy"}></div>
+            <div style={{backgroundImage: "url(" + profileImage +")"}} className={styles.profileImage + " lazy"}></div>
             <div className={styles.profileImageDummy}></div>
             <div className={styles.profileCard}>
               <span className={styles.hello}><Trans>homeHello</Trans></span>
