@@ -1,0 +1,12 @@
+{
+    "urlname": "vssh-keyserver",
+    "lang": "de",
+    "name": "VSSH Keyserver",
+    "shortDescription": "Zentrale Verwaltung für SSH Schlüssel",
+    "longDescription": "Software für zentrale Verwaltung von SSH Schlüsseln.",
+    "links": {
+        "website": null,
+        "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
+    },
+    "image": "../images/test.jpg"
+}

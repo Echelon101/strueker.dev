@@ -1,0 +1,12 @@
+{
+    "urlname": "projectx",
+    "lang": "de",
+    "name": "",
+    "shortDescription": "Minecraft Forge Server Network Software",
+    "longDescription": "Software to host a Forge Server Network over multiple servers.",
+    "links": {
+        "website": "",
+        "github": ""
+    },
+    "image": "../images/test.jpg"
+}

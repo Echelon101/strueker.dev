@@ -2,11 +2,11 @@
     "urlname": "commandblock",
     "lang": "en",
     "name": "CommandBlock",
-    "shortDescription": "Minecraft Marketplace managed IT services",
-    "longDescription": "",
+    "shortDescription": "Managed IT services",
+    "longDescription": "Managed IT services for Minecraft Marketplace partners. We are offering gameserver hosting and workflow optimizations for marketplace content creation",
     "links": {
-        "website": "",
-        "github": ""
+        "website": null,
+        "github": null
     },
     "image": "../images/test.jpg"
 }

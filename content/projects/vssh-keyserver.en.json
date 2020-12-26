@@ -1,0 +1,12 @@
+{
+    "urlname": "vssh-keyserver",
+    "lang": "de",
+    "name": "VSSH Keyserver",
+    "shortDescription": "Central hosting of SSH keys",
+    "longDescription": "System to create and manage SSH keys online.",
+    "links": {
+        "website": null,
+        "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
+    },
+    "image": "../images/test.jpg"
+}

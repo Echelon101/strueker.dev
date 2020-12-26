@@ -1,0 +1,12 @@
+{
+    "urlname": "strueker-net",
+    "lang": "en",
+    "name": "Strueker.net",
+    "shortDescription": "My personal website and the code behind the scenes.",
+    "longDescription": null,
+    "links": {
+        "website": "https://strueker.net",
+        "github": null
+    },
+    "image": "../images/test.jpg"
+}
