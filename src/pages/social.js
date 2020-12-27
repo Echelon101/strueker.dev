@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../layouts/default";
 import { Trans, Link, useI18next } from "gatsby-plugin-react-i18next"
 import { graphql } from 'gatsby'
+import PropTypes from "prop-types"
 
 import styles from "./social.module.scss";
 
@@ -18,9 +19,9 @@ query AllSocialsQuery {
   }  
 `
 
-export default function SocialPage({data}) {
-    
-    const {t} = useI18next();
+const SocialPage = ({ data }) => {
+
+    const { t } = useI18next();
     return (
         <Layout module="social" title={t("social")} description={t("socialDescription")}>
             <section>
@@ -33,8 +34,8 @@ export default function SocialPage({data}) {
                         {
                             data.allSocialsJson.nodes.map((social) => {
                                 return (
-                                    <a className={styles.socialCard} href={social.url}>
-                                        <div className={styles.socialImage} style={{backgroundImage: "url("+social.image+")"}}>
+                                    <a className={styles.socialCard} href={social.url} target="_blank" rel="noreferrer" key={social.url}>
+                                        <div className={styles.socialImage} style={{ backgroundImage: "url(" + social.image + ")" }}>
                                             <span className={styles.socialName}>{social.platformName}</span>
                                             <span className={styles.socialUsername}>{social.platformHandle}</span>
                                         </div>
@@ -50,3 +51,9 @@ export default function SocialPage({data}) {
         </Layout>
     );
 }
+
+SocialPage.propTypes = {
+    data: PropTypes.object.isRequired
+};
+
+export default SocialPage;

@@ -5,12 +5,12 @@ import Layout from "../layouts/default"
 // markup
 const NotFoundPage = () => {
   return (
-    <Layout title="Not found">
+    <Layout title="Not found" module="error">
       <section>
         <article>
           <h1>Page not found</h1>
           <p>
-            Whoops... That page doesn't exist, so you may as well <Link to="/">go home</Link>.
+            Whoops... That page doesn&apos;t exist, so you may as well <Link to="/">go home</Link>.
           </p>
         </article>
       </section>

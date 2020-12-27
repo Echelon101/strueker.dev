@@ -1,12 +1,13 @@
 import * as React from "react"
 import Layout from "../layouts/default"
+import PropTypes from "prop-types"
 
 import styles from "./index.module.scss"
 import projectStyles from "./projects.module.scss"
 import profileImage from "../images/timo.jpg"
 
 import { Trans, Link } from "gatsby-plugin-react-i18next"
-import {graphql} from "gatsby";
+import { graphql } from "gatsby";
 
 
 export const query = graphql`
@@ -47,19 +48,19 @@ class IndexPage extends React.Component {
       <Layout title="Timo Strüker" module="home" transparentTopbar={true}>
         <section className={styles.heroSection}>
           <div className={styles.profile + " profile"}>
-            <div style={{backgroundImage: "url(" + profileImage +")"}} className={styles.profileImage + " lazy"}></div>
+            <div style={{ backgroundImage: "url(" + profileImage +")" }} className={styles.profileImage + " lazy"}></div>
             <div className={styles.profileImageDummy}></div>
             <div className={styles.profileCard}>
               <span className={styles.hello}><Trans>homeHello</Trans></span>
               <span className={styles.name}>Timo Strüker</span>
               <span className={styles.description}><Trans>homeMe</Trans> <span id="descriptionType"><Trans>homeWebDeveloper</Trans></span>.</span>
-  
+
               <div className={styles.contactLinks}>
-                {/*<a className={styles.contactLink} href={"tel:"+meta.contactPhone}><i className="fas fa-fw fa-phone"></i>{meta.contactPhone}</a>*/}
-                <a className={styles.contactLink} href={"mailto:"+meta.contactEmail}><i className="far fa-fw fa-envelope"></i>{meta.contactEmail}</a>
-                <a className={styles.contactLink} href={meta.mapsLink} rel="noopener" target="_blank"><i className="fas fa-fw fa-map-marker-alt"></i><Trans>homeMyLocation</Trans></a>
-                <a className={styles.contactLink} href={"https://twitter.com/"+meta.contactTwitter} rel="noopener" target="_blank"><i className="fab fa-fw fa-twitter"></i>@{meta.contactTwitter}</a>
-                <a className={styles.contactLink} href={"https://github.com/"+meta.contactGitHub} rel="noopener" target="_blank"><i className="fab fa-fw fa-github"></i>{meta.contactGitHub}</a>
+                {/*<a className={styles.contactLink} href={"tel:" + meta.contactPhone}><i className="fas fa-fw fa-phone"></i>{meta.contactPhone}</a>*/}
+                <a className={styles.contactLink} href={"mailto:" + meta.contactEmail}><i className="far fa-fw fa-envelope"></i>{meta.contactEmail}</a>
+                <a className={styles.contactLink} href={meta.mapsLink} rel="noreferrer" target="_blank"><i className="fas fa-fw fa-map-marker-alt"></i><Trans>homeMyLocation</Trans></a>
+                <a className={styles.contactLink} href={"https://twitter.com/" + meta.contactTwitter} rel="noreferrer" target="_blank"><i className="fab fa-fw fa-twitter"></i>@{meta.contactTwitter}</a>
+                <a className={styles.contactLink} href={"https://github.com/" + meta.contactGitHub} rel="noreferrer" target="_blank"><i className="fab fa-fw fa-github"></i>{meta.contactGitHub}</a>
               </div>
             </div>
           </div>
@@ -67,10 +68,10 @@ class IndexPage extends React.Component {
         <section className="aboutSection">
           <article>
             <h1><Trans>homeAboutMe</Trans></h1>
-            <p><Trans>homeAboutMeHello</Trans><br/><Trans>homeAboutMeText</Trans></p>
+            <p><Trans>homeAboutMeHello</Trans><br /><Trans>homeAboutMeText</Trans></p>
           </article>
         </section>
-        <a className={styles.creditSection} href="https://unsplash.com/@unkn0wncat" target="_blank" rel="noopener">
+        <a className={styles.creditSection} href="https://unsplash.com/@unkn0wncat" target="_blank" rel="noreferrer">
           <div>
             <span><i className="fas fa-fw fa-camera"></i> <Trans>homeImageCredit</Trans></span>
             <i className="fas fa-fw fa-chevron-right"></i>
@@ -82,19 +83,19 @@ class IndexPage extends React.Component {
             <div className={projectStyles.projectList}>
               {this.props.data.allProjectsJson.nodes.map((project) => {
                 return (
-                    <div className={projectStyles.projectCard}>
-                      {/*<div className="projectCardActivityIndicator activityIndicatorBlue">Live</div>*/}
-                      <div className={projectStyles.projectCardImage} style={{ backgroundImage: "url("+project.image.childImageSharp.resize.src+")" }}>
-                        <div className={projectStyles.projectCardMeta}>
-                          <span className={projectStyles.projectCardTitle}>{project.name}</span>
-                          <span className={projectStyles.projectCardTeaser}>{project.shortDescription}</span>
-                        </div>
-                      </div>
-
-                      <div className={projectStyles.projectCardCTAContainer}>
-                        <div className={projectStyles.projectCardCTA}><Link to={"/projects/"+project.urlname}><Trans>projectView</Trans></Link></div>
+                  <div className={projectStyles.projectCard} key={project.lang + "/" + project.urlname}>
+                    {/*<div className="projectCardActivityIndicator activityIndicatorBlue">Live</div>*/}
+                    <div className={projectStyles.projectCardImage} style={{ backgroundImage: "url(" + project.image.childImageSharp.resize.src + ")" }}>
+                      <div className={projectStyles.projectCardMeta}>
+                        <span className={projectStyles.projectCardTitle}>{project.name}</span>
+                        <span className={projectStyles.projectCardTeaser}>{project.shortDescription}</span>
                       </div>
                     </div>
+
+                    <div className={projectStyles.projectCardCTAContainer}>
+                      <div className={projectStyles.projectCardCTA}><Link to={"/projects/" + project.urlname}><Trans>projectView</Trans></Link></div>
+                    </div>
+                  </div>
                 );
               })}
             </div>
@@ -110,6 +111,10 @@ class IndexPage extends React.Component {
       </Layout>
     )
   }
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default IndexPage

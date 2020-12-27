@@ -4,7 +4,7 @@ import Navigation from "../components/navigation"
 import SEO from "../components/seo";
 
 import "./default.scss";
-import {Link, Trans, useTranslation} from 'gatsby-plugin-react-i18next';
+import { Link, Trans } from 'gatsby-plugin-react-i18next';
 import LanguageSwitcher from "../components/languageSwitcher";
 
 class Layout extends React.Component {
@@ -17,7 +17,7 @@ class Layout extends React.Component {
                     {this.props.children}
                 </div>
                 <footer role="contentinfo">&copy; Timo Strüker, <Link to="/legal/about" class="spf-link"><Trans i18nKey="imprint">Imprint</Trans></Link> | <Link to="/legal/datasec" class="spf-link"><Trans i18nKey="datasec">Data Protection</Trans></Link> | <Link to="/legal/disclaimer" class="spf-link"><Trans i18nKey="disclaimer">Disclaimer</Trans></Link> | <Trans i18nKey="creatorAttribution">This website was designed by</Trans> <a href="https://kevink.dev" target="_blank" rel="noreferrer">Kevin Kandlbinder</a> | <a href="#languageChooser">Language</a></footer>
-                <div class="languageModal" id="languageChooser">
+                <div className="languageModal" id="languageChooser">
                     <LanguageSwitcher />
                 </div>
             </>
@@ -38,7 +38,8 @@ Layout.propTypes = {
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
     module: PropTypes.string.isRequired,
-    transparentTopbar: PropTypes.bool
+    transparentTopbar: PropTypes.bool,
+    children: PropTypes.object.isRequired
 }
 
 export default Layout;
