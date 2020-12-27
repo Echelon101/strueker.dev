@@ -2,8 +2,8 @@
     "urlname": "strueker-net",
     "lang": "de",
     "name": "Strueker.net",
-    "shortDescription": "Meine Portfolio Webseite und der Code dahinter.",
-    "longDescription": null,
+    "shortDescription": "Meine Webseite und der Code dahinter.",
+    "longDescription": "Dises Projekt ist eine einfache Webseite, die in Gatsby geschrieben wurde. Die Website dient als Startseite für meine Hauptdomain.",
     "links": {
         "website": "https://strueker.net",
         "github": "https://github.com/echelon101/strueker.net"

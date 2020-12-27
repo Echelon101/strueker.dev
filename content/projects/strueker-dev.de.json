@@ -3,7 +3,7 @@
     "lang": "de",
     "name": "Strueker.dev",
     "shortDescription": "Diese Seite und der Code dahinter.",
-    "longDescription": null,
+    "longDescription": "Die Website basiert auf Gatsby und wurde von Kevin Kandlbinder entworfen. Sie stellt ein persönliches Portfolio für Projekte dar.",
     "links": {
         "website": "https://strueker.dev",
         "github": "https://github.com/echelon101/strueker.dev"
