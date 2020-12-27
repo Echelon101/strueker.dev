@@ -68,6 +68,7 @@ function SEO({ description, meta, title }) {
       <script src="https://kit.fontawesome.com/1377f925e0.js" crossOrigin="anonymous"></script>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22df997890524f6b8cc73134c39c1191"}'></script>
     </Helmet>
   )
 }
