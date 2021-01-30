@@ -21,7 +21,7 @@
     &:active,
     &:focus {
         transform: scale(1.05);
-        box-shadow: -1px 11px 33px -10px rgba(127, 127, 127, 0.2), -1px 11px 33px -10px rgba($accentColor, .75);
+        box-shadow: -1px 11px 33px -10px rgba(127, 127, 127, 0.2), -1px 11px 33px -10px rgba($defaultShadowColor, .75);
     }
 }
 

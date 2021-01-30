@@ -9,6 +9,8 @@ import profileImage from "../images/timo.jpg"
 import { Trans, Link } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby";
 
+import anime from "animejs";
+
 
 export const query = graphql`
   query GetMetaAndProjects($language: String) {
@@ -41,6 +43,31 @@ export const query = graphql`
 `;
 
 class IndexPage extends React.Component {
+  componentDidMount() {
+    anime({
+      targets: ["."+styles.profileCard+" > span", "."+styles.profileCard+" a"],
+      opacity: [0, 1],
+      translateX: [100, 0],
+      duration: 250,
+      delay: anime.stagger(20),
+      easing: 'easeInOutCirc'
+    });
+    anime({
+      targets: ["."+styles.profileImageDummy],
+      translateX: [0, -3],
+      translateY: [0, 3],
+      duration: 250,
+      easing: 'easeInOutCirc'
+    });
+    anime({
+      targets: ["."+styles.profileImage],
+      translateX: [0, 4],
+      translateY: [0, -4],
+      duration: 250,
+      easing: 'easeInOutCirc'
+    });
+  }
+
   render() {
     let meta = this.props.data.site.siteMetadata;
 
@@ -83,7 +110,7 @@ class IndexPage extends React.Component {
             <div className={projectStyles.projectList}>
               {this.props.data.allProjectsJson.nodes.map((project) => {
                 return (
-                  <div className={projectStyles.projectCard} key={project.lang + "/" + project.urlname}>
+                  <Link className={projectStyles.projectCard} key={project.lang + "/" + project.urlname} to={"/projects/" + project.urlname}>
                     {/*<div className="projectCardActivityIndicator activityIndicatorBlue">Live</div>*/}
                     <div className={projectStyles.projectCardImage} style={{ backgroundImage: "url(" + project.image.childImageSharp.resize.src + ")" }}>
                       <div className={projectStyles.projectCardMeta}>
@@ -92,10 +119,10 @@ class IndexPage extends React.Component {
                       </div>
                     </div>
 
-                    <div className={projectStyles.projectCardCTAContainer}>
+                    {/*<div className={projectStyles.projectCardCTAContainer}>
                       <div className={projectStyles.projectCardCTA}><Link to={"/projects/" + project.urlname}><Trans>projectView</Trans></Link></div>
-                    </div>
-                  </div>
+                    </div>*/}
+                  </Link>
                 );
               })}
             </div>
