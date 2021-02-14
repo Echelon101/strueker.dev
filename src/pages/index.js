@@ -39,6 +39,15 @@ export const query = graphql`
         featured
       }
     }
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
   }
 `;
 
