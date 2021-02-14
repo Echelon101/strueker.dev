@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Layout from "../layouts/default";
+import Layout from "../../../src/layouts/default";
 import { graphql } from "gatsby";
 import { Trans, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
 import PropTypes from "prop-types"

@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../../layouts/default";
+import Layout from "../../../../src/layouts/default";
 import { Trans, useI18next } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby";
 import PropTypes from "prop-types"

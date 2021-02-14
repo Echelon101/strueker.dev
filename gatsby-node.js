@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     result.data.allProjectsJson.nodes.forEach((node) => {
         // eslint-disable-next-line no-undef
         console.log("Creating Page: ", `/${node.lang}/projects/${node.urlname}`);
-
+        
         if (node.lang !== "ignoreme") createPage({
             path: `/${node.lang}/projects/${node.urlname}`,
             component: projectTemplate,
