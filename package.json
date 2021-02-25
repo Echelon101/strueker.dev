@@ -24,7 +24,7 @@
     "animejs": "^3.2.1",
     "babel-plugin-i18next-extract": "^0.8.2",
     "gatsby": "^2.32.4",
-    "gatsby-cli": "^2.19.1",
+    "gatsby-cli": "^2.19.2",
     "gatsby-plugin-asset-path": "^3.0.3",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-offline": "^3.10.1",
