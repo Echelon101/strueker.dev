@@ -11,5 +11,7 @@ module.exports = {
     "contactPhone": "+4900000000",
     "mapsLink": "https://goo.gl/maps/8MSgFK6CYpmANVJd8",
     "contactTwitter": "timomrx",
-    "contactGitHub": "Echelon101"
+    "contactGitHub": "Echelon101",
+    "contactMastodon": "@timo@1in1.net",
+    "contactMastodonHref": "https://mastodon.1in1.net/@timo"
 };
