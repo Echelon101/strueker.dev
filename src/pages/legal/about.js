@@ -27,8 +27,8 @@ export default function ImprintPage() {
                     <h1><Trans>imprint</Trans></h1>
 
                     <p>Angaben gemäß § 5 TMG</p><p>Timo Strüker<br />
-                    Danziger Str. 50<br />
-                    25451 Quickborn <br />
+                    Meister-Francke-Str. 22<br />
+                    22309 Hamburg <br />
                     </p><p> <strong>Vertreten durch: </strong><br />
                     Timo Strüker<br />
                     </p><p><strong>Kontakt:</strong> <br />

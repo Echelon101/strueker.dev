@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 import Layout from "../layouts/default";
 import PropTypes from "prop-types"
 
-import styles from "./project.module.scss";
+import * as styles from "./project.module.scss";
 
 export const query = graphql`
 query GetProject($urlname: String!, $lang: String!, $language: String!) {
@@ -63,7 +63,7 @@ const ProjectTemplate = ({ data }) => {
           </article>
         </section>
         : null}
-      {project.links.github !== null || project.links.website !== null ?
+      {project.links !== null ?
         <section className={styles.projectLinks}>
           <div>
             <h1>Links</h1>
