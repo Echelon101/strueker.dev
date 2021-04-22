@@ -3,16 +3,34 @@
 
 .heroSection {
     width: 100%;
-    background: #000710;
-    min-height: 600px;
-    padding-top: 100px;
+    height: 600px;
     overflow: hidden;
-    //background: radial-gradient(ellipse at top left, #1f0ba659, transparent), radial-gradient(ellipse at bottom right, #4a086829, transparent);
-    background: linear-gradient(to bottom, transparent 80%, $background), radial-gradient(ellipse at top left,rgba(#3a5abc, .2313),transparent), radial-gradient(ellipse at bottom right,rgba(#071480, .1137),transparent);
 
-    @media(pointer: coarse),
-    (pointer: none) {
-        min-height: 700px;
+    .heroSectionBg, .heroSectionBgOver {
+        position: absolute;
+        width: 100%;
+        max-width: unset;
+        height: 600px;
+        padding: 0;
+
+        @media (pointer: coarse), (pointer: none) {
+            height: 700px;
+        }
+    }
+
+    .heroSectionBg {
+        background: linear-gradient(to bottom, transparent 80%, $background), 
+            radial-gradient(ellipse at top left,rgba(#3a5abc, .2313),transparent), 
+            radial-gradient(ellipse at bottom right,rgba(#071480, .1137),transparent);
+        
+    }
+
+    .heroSectionBgOver {
+        background: linear-gradient(to bottom, transparent 80%, $background);
+    }
+
+    @media (pointer: coarse), (pointer: none) {
+        height: 700px;
     }
 
     .profile {
@@ -22,10 +40,11 @@
         max-width: 600px;
         max-height: 400px;
         transform: translate(-50%, 0%);
+        top: 100px;
 
         .hello {
             font-weight: 100;
-            opacity: .75;
+            opacity: 0.75;
             display: block;
             margin-bottom: -5px;
         }
@@ -48,13 +67,12 @@
         }
 
         .contactLink {
-            transition: text-decoration .5s;
+            transition: text-decoration 0.5s;
             text-decoration: underline dotted rgba(0, 0, 0, 0);
             padding: 6px 0 6px 25px;
             color: $textColor;
 
-            @media(pointer: coarse),
-            (pointer: none) {
+            @media (pointer: coarse), (pointer: none) {
                 padding-top: 15px;
                 padding-bottom: 15px;
             }
@@ -62,10 +80,10 @@
 
         .contactLink:hover,
         .contactLink:active {
-            text-decoration: underline dotted rgba(0, 0, 0, .5);
+            text-decoration: underline dotted rgba(0, 0, 0, 0.5);
         }
 
-        .contactLink>i {
+        .contactLink > i {
             color: $accentColor;
             margin-left: -25px;
             margin-right: 5px;
@@ -74,11 +92,8 @@
         .profileCard {
             width: calc(100% - 40px);
             height: calc(100% - 20px);
-            //background: $background;
             transform: translate(40px, 20px);
             border-radius: 5px;
-            /*box-shadow: -1px 11px 33px -10px rgba(127,127,127,0.4);*/
-            //box-shadow: -1px 11px 33px -10px #2b6fe5;
             padding: 20px 20px 20px 230px;
             color: $textColor;
         }
@@ -94,27 +109,23 @@
             background-color: #1c1c1c;
             background-size: cover;
             background-position: center;
-            transition: transform .25s;
+            transition: transform 0.25s;
         }
 
         .profileImage {
             z-index: 20;
-            /*box-shadow: -5px 7px 10px -6px rgba(127,127,127,.4);*/
             box-shadow: -1px 11px 33px -10px $defaultShadowColor;
-            //transform: translate(4px, -4px);
+            clip-path: polygon(6% 8%, 88% 5%, 95% 91%, 7% 96%);
         }
 
         .profileImageDummy {
             z-index: 10;
             background: $accentColor;
-            opacity: .2;
-            //transform: translate(-3px, 3px);
-            /*box-shadow: 0 0 10px -10px var(--accent-color);
-            background: transparent;*/
+            opacity: 0.2;
+            clip-path: polygon(14% 4%, 95% 1%, 88% 96%, 2% 89%);
         }
 
         @media (max-width: 590px) {
-
             .profileImage,
             .profileImageDummy {
                 display: none;
@@ -124,11 +135,8 @@
                 padding: 20px 20px 20px 20px;
                 transform: translate(20px, 20px);
             }
-
-
         }
     }
-
 }
 
 .amazonAlexaSection,
@@ -140,13 +148,13 @@
 .creditSection {
     @include homeBanner;
 
-    >div {
+    > div {
         padding: 15px !important;
         line-height: 15px;
         font-size: 1.2em;
         color: white;
 
-        >span>i {
+        > span > i {
             line-height: 15px !important;
         }
     }

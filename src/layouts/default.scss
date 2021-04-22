@@ -36,63 +36,9 @@ footer {
 }
 
 #content {
-    /*min-height: calc(100vh - 26px);*/
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
-
-.topBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    background: rgba($background, .95);
-    backdrop-filter: blur(5px);
-    z-index: 999;
-    transition: background .25s;
-
-    @supports(backdrop-filter: blur(5px)) {
-        background: rgba($background, .9);
-    }
-
-    .topBarInner {
-        display: flex;
-        width: 100%;
-        max-width: $layoutWidth;
-        margin: auto;
-
-        > :first-child {
-            padding-left: $layoutPadding;
-        }
-
-        > :last-child {
-            padding-right: $layoutPadding;
-        }
-
-        a {
-            display: block;
-            padding: 10px $layoutPadding;
-            color: white;
-            /*text-decoration: underline dotted white;*/
-            text-decoration: none;
-            border-top: 2px solid transparent;
-
-            &:hover {
-                border-color: rgba(255, 255, 255, .25);
-            }
-
-            &.active {
-                border-color: white;
-            }
-        }
-    }
-}
-
-.homeBar.homeBarTransparent {
-    background: transparent;
-    backdrop-filter: blur(0);
 }
 
 .flexSpacer {
@@ -100,10 +46,10 @@ footer {
     text-align: center;
 }
 
-section>div:not(.profile),
-section>article,
-.section>div:not(.profile),
-.section>article {
+section > div:not(.profile),
+section > article,
+.section > div:not(.profile),
+.section > article {
     max-width: $layoutWidth;
     width: 100%;
     padding: 39px 20px;
@@ -124,44 +70,4 @@ article {
 
 h1 {
     font-size: 2em;
-}
-
-.languageModal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .7);
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .25s;
-
-    &:target {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .languageModalInner {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        background: black;
-        font-family: $mainFont;
-        padding: 20px;
-        border-radius: 5px;
-
-        a {
-            color: white;
-            text-decoration-style: dotted;
-        }
-
-    }
-
-    .modalCloseLink {
-        text-decoration: none;
-    }
 }

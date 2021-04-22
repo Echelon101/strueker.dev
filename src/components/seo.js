@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "gatsby-plugin-react-i18next"
-import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "gatsby-plugin-react-i18next";
+import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 function SEO({ description, meta, title }) {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ function SEO({ description, meta, title }) {
         }
       }
     `
-  )
+  );
 
   const metaDescription = description || t("siteDescription");
 
@@ -61,27 +61,34 @@ function SEO({ description, meta, title }) {
         },
         {
           name: "keywords",
-          content: site.siteMetadata.keywords
-        }
+          content: site.siteMetadata.keywords,
+        },
       ].concat(meta)}
     >
-      <script src="https://kit.fontawesome.com/1377f925e0.js" crossOrigin="anonymous"></script>
+      <script
+        src="https://kit.fontawesome.com/1377f925e0.js"
+        crossOrigin="anonymous"
+      ></script>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <meta name="battery-savings" content="allow-reduced-framerate"></meta>
       <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "22df997890524f6b8cc73134c39c1191"}'></script>
     </Helmet>
-  )
+  );
 }
 
 SEO.defaultProps = {
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
