@@ -1,9 +1,16 @@
 {
-    "name": "kevink.dev",
+    "name": "strueker.dev",
     "version": "1.1.0",
     "private": true,
-    "description": "KevinK.dev",
-    "author": "Kevin Kandlbinder",
+    "description": "Strueker.dev",
+    "author": "Timo Strüker <developer@strueker.net> (https://strueker.dev)",
+    "contributors": [
+        "Kevin Kandlbinder <kevin@kevink.dev> (https://kevink.dev)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Echelon101/strueker.dev"
+    },
     "keywords": [
         "gatsby"
     ],
