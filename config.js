@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    siteName: "Strueker.dev",
+    siteName: "Strueker.dev", //todo Change to VAR
     siteAuthor: "@timomrx",
-    siteURL: "https://strueker.dev",
+    siteURL: "https://strueker.dev",//todo Change to VAR
     payPalMail: "example@example.com",
     siteKeywords:
         "Timo Strüker, Timo, Strüker, IT, System Administrator, Developer, PHP, Java, C#",
