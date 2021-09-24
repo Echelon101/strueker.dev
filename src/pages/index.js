@@ -4,16 +4,16 @@ import PropTypes from "prop-types";
 
 import * as styles from "./index.module.scss";
 import * as projectStyles from "./projects.module.scss";
-import profileImage from "../images/timo.jpg";
 
 import { Trans, Link } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 
 import anime from "animejs";
-import { tsParticles } from "tsparticles";
 
-import * as particleConfig from "./index.particles.json";
+import { ArrowRight, AtSign, Github, Mail, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const query = graphql`
     query GetMetaAndProjects($language: String) {
@@ -28,6 +28,13 @@ export const query = graphql`
                 contactMastodonHref
             }
         }
+        allSkillsJson(sort: { fields: type, order: ASC }) {
+            nodes {
+                name
+                type
+                href
+            }
+        }
         allProjectsJson(
             filter: { lang: { eq: $language }, featured: { gte: 0 } }
             sort: { fields: featured, order: ASC }
@@ -38,9 +45,7 @@ export const query = graphql`
                 name
                 image {
                     childImageSharp {
-                        resize(width: 400, quality: 90) {
-                            src
-                        }
+                        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
                     }
                 }
                 shortDescription
@@ -71,6 +76,8 @@ export const query = graphql`
 `;
 
 const IndexPage = (props) => {
+    const {t} = useTranslation();
+
     React.useEffect(() => {
         if (typeof window === "undefined") return;
 
@@ -99,28 +106,25 @@ const IndexPage = (props) => {
             duration: 250,
             easing: "easeInOutCirc",
         });
-
-        tsParticles.load("particle-container", particleConfig);
     }, []);
 
     let meta = props.data.site.siteMetadata;
     let file = props.data.file;
 
     return (
-        
-        <Layout title="Timo Strüker" transparentTopbar={true}>
+        <Layout title="Timo Strüker" transparentTopbar={true} description={t("siteDescription")}>
             <section className={styles.heroSection}>
                 <div
                     className={styles.heroSectionBg}
-                    id="particle-container"></div>
+                    id="particle-container"
+                ></div>
                 <div className={styles.heroSectionBgOver}></div>
                 <div className={styles.profile + " profile"}>
                     <div
-                        data-bg={"url(" + profileImage + ")"}
-                        style={{
-                            backgroundImage: "url(" + profileImage + ")",
-                        }}
-                        className={styles.profileImage + " lazy"}></div>
+                        className={styles.profileImage}
+                    >
+                        <StaticImage src={"../../content/images/timo.jpg"} width={250} height={350} placeholder="blurred"></StaticImage>
+                    </div>
                     <div className={styles.profileImageDummy}></div>
                     <div className={styles.profileCard}>
                         <span className={styles.hello}>
@@ -136,27 +140,38 @@ const IndexPage = (props) => {
                         </span>
 
                         <div className={styles.contactLinks}>
+                            {/*<a
+                                className={styles.contactLink}
+                                href={"tel:" + meta.contactPhone}
+                                rel="me"
+                            >
+                                <Phone width={20} />
+                                {meta.contactPhone}
+                            </a>*/}
                             <a
                                 className={styles.contactLink}
                                 href={"mailto:" + meta.contactEmail}
-                                rel="me">
-                                <i className="far fa-fw fa-envelope"></i>
+                                rel="me"
+                            >
+                                <Mail width={20}/>
                                 {meta.contactEmail}
                             </a>
                             <a
                                 className={styles.contactLink}
                                 href={meta.mapsLink}
                                 rel="noreferrer "
-                                target="_blank">
-                                <i className="fas fa-fw fa-map-marker-alt"></i>
+                                target="_blank"
+                            >
+                                <MapPin width={20} />
                                 <Trans>homeMyLocation</Trans>
                             </a>
                             <a
                                 className={styles.contactLink}
                                 href={meta.contactMastodonHref}
                                 rel="noreferrer me"
-                                target="_blank">
-                                <i className="fab fa-fw fa-mastodon"></i>
+                                target="_blank"
+                            >
+                                <AtSign width={20}/>
                                 {meta.contactMastodon}
                             </a>
                             <a
@@ -165,30 +180,67 @@ const IndexPage = (props) => {
                                     "https://github.com/" + meta.contactGitHub
                                 }
                                 rel="noreferrer me"
-                                target="_blank">
-                                <i className="fab fa-fw fa-github"></i>
+                                target="_blank"
+                            >
+                                <Github width={20}/>
                                 {meta.contactGitHub}
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="aboutSection">
+            <section className={styles.aboutSection}>
                 <article>
-                    <MDXRenderer>{file.childMdx.body}</MDXRenderer>
+                    <div className={styles.aboutText}>
+                        <MDXRenderer>{file.childMdx.body}</MDXRenderer>
+                    </div>
+                    <div className={styles.skills}>
+                        <h2>
+                            <Trans>mySkills</Trans>
+                        </h2>
+                        <div className={styles.skillList}>
+                            {props.data.allSkillsJson.nodes.map((skill) => {
+                                return skill.href ? (
+                                    <a
+                                        className={
+                                            styles.skill +
+                                            " " +
+                                            styles["skill_" + skill.type]
+                                        }
+                                        href={skill.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {skill.name}
+                                    </a>
+                                ) : (
+                                    <span
+                                        className={
+                                            styles.skill +
+                                            " " +
+                                            styles["skill_" + skill.type]
+                                        }
+                                    >
+                                        {skill.name}
+                                    </span>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </article>
             </section>
             {/*<a
                 className={styles.creditSection}
                 href="https://unsplash.com/@jannikkiel"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+            >
                 <div>
                     <span>
-                        <i className="fas fa-fw fa-camera"></i>{" "}
+                        <Camera/>{" "}
                         <Trans>homeImageCredit</Trans>
                     </span>
-                    <i className="fas fa-fw fa-chevron-right"></i>
+                    <ArrowRight/>
                 </div>
             </a>*/}
             <section className="featuredSection">
@@ -202,26 +254,28 @@ const IndexPage = (props) => {
                                 <Link
                                     className={projectStyles.projectCard}
                                     key={project.lang + "/" + project.urlname}
-                                    to={"/projects/" + project.urlname}>
+                                    to={"/projects/" + project.urlname}
+                                >
                                     <div
                                         className={
                                             projectStyles.projectCardImage
                                         }
-                                        style={{
-                                            backgroundImage:
-                                                "url(" +
-                                                project.image.childImageSharp
-                                                    .resize.src +
-                                                ")",
-                                        }}>
+                                    >
+                                        <div className={
+                                            projectStyles.projectCardBg
+                                        }>
+                                            <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} objectFit="cover" style={{height: "100%"}}></GatsbyImage>
+                                        </div>
                                         <div
                                             className={
                                                 projectStyles.projectCardMeta
-                                            }>
+                                            }
+                                        >
                                             <span
                                                 className={
                                                     projectStyles.projectCardTitle
-                                                }>
+                                                }
+                                            >
                                                 {project.name}
                                             </span>
                                             <span>
@@ -235,7 +289,7 @@ const IndexPage = (props) => {
                     </div>
                     <Link to="/projects" className={styles.seeMoreButton}>
                         <Trans>seeMore</Trans>{" "}
-                        <i className="fas fa-fw fa-chevron-right"></i>
+                        <ArrowRight/>
                     </Link>
                 </article>
             </section>

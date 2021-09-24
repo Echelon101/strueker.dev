@@ -6,10 +6,14 @@ import PropTypes from "prop-types";
 
 import * as styles from "./project.module.scss";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { ExternalLink, Github } from "lucide-react";
 
 export const query = graphql`
     query GetProject($urlname: String!, $lang: String!, $language: String!) {
-        allProjectsJson(filter: { urlname: { eq: $urlname }, lang: { eq: $lang } }) {
+        allProjectsJson(
+            filter: { urlname: { eq: $urlname }, lang: { eq: $lang } }
+        ) {
             nodes {
                 lang
                 urlname
@@ -19,7 +23,9 @@ export const query = graphql`
                     website
                 }
                 image {
-                    publicURL
+                    childImageSharp {
+                        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+                    }
                 }
                 shortDescription
             }
@@ -57,14 +63,15 @@ const ProjectTemplate = ({ data }) => {
         <Layout
             description={project.shortDescription}
             title={t("project") + ": " + projectName}
-            transparentTopbar={true}>
+            transparentTopbar={true}
+        >
             <section className={styles.projectHeader}>
                 <div style={{ paddingTop: 0 }}>
                     <div
                         className={styles.headerBackground}
-                        style={{
-                            backgroundImage: "url(" + project.image.publicURL + ")",
-                        }}></div>
+                    >
+                       <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} style={{width: "100%", height: "100%"}} objectFit="cover"></GatsbyImage> 
+                    </div>
                     <header>
                         <div className={styles.headerInner}>
                             <h1>
@@ -89,14 +96,22 @@ const ProjectTemplate = ({ data }) => {
                         <h1>Links</h1>
                         <div className={styles.linkList}>
                             {project.links.github !== null ? (
-                                <a href={project.links.github} target="_blank" rel="noreferrer">
-                                    <i className="fab fa-github" aria-hidden="true"></i>{" "}
+                                <a
+                                    href={project.links.github}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <Github height={15}/>{" "}
                                     <Trans>projectViewGitHub</Trans>
                                 </a>
                             ) : null}
                             {project.links.website !== null ? (
-                                <a href={project.links.website} target="_blank" rel="noreferrer">
-                                    <i className="fas fa-external-link-alt" aria-hidden="true"></i>{" "}
+                                <a
+                                    href={project.links.website}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <ExternalLink height={15}/>{" "}
                                     <Trans>projectViewWebsite</Trans>
                                 </a>
                             ) : null}

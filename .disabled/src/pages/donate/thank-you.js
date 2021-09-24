@@ -37,9 +37,14 @@ const ThankYouPage = (props) => {
                     </h1>
 
                     <p>
-                        <Trans contactEmail={contactEmail} i18nKey="donateThanksText">
+                        <Trans
+                            contactEmail={contactEmail}
+                            i18nKey="donateThanksText"
+                        >
                             donateThanksText
-                            <a href={"mailto:" + contactEmail}>{{ contactEmail }}</a>
+                            <a href={"mailto:" + contactEmail}>
+                                {{ contactEmail }}
+                            </a>
                         </Trans>
                     </p>
                 </article>

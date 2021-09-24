@@ -16,15 +16,26 @@ module.exports = {
         contactMastodon: extConfig.contactMastodon,
         contactMastodonHref: extConfig.contactMastodonHref,
     },
-    assetPrefix: "/assets",
     plugins: [
         `gatsby-plugin-eslint`,
-        {
-            resolve: "gatsby-plugin-asset-path",
-        },
+        `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-transformer-json`,
+        {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: 'SocialsJson',
+                imagePath: 'image',
+            },
+        },
+        {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: 'FriendsJson',
+                imagePath: 'imageURL',
+            },
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -68,15 +79,18 @@ module.exports = {
             },
         },
         `gatsby-plugin-robots-txt`,
-        {
+        /*{
             resolve: `gatsby-plugin-offline`,
             options: {
-                precachePages: ["/", "/en", "/en/projects", "/de", "/de/projects"],
-                workboxConfig: {
-                    globPatterns: ["**/*"],
-                },
+                precachePages: [
+                    "/",
+                    "/en",
+                    "/en/projects",
+                    "/de",
+                    "/de/projects",
+                ],
             },
-        },
+        },*/
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-react-helmet`,
         {

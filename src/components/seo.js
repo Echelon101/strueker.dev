@@ -26,55 +26,59 @@ function SEO({ description, meta, title }) {
         <Helmet
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
-            meta={[
-                {
-                    name: `description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:title`,
-                    content: title,
-                },
-                {
-                    property: `og:description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
-                {
-                    name: "keywords",
-                    content: site.siteMetadata.keywords,
-                },
-            ].concat(meta)}>
-            <script src="https://kit.fontawesome.com/1377f925e0.js" crossOrigin="anonymous"></script>
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-                href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-                rel="stylesheet"
-            />
-            <meta name="battery-savings" content="allow-reduced-framerate"></meta>
+        >
+            <meta
+                name="battery-savings"
+                content="allow-reduced-framerate"
+            ></meta>
+            {
+                [
+                    {
+                        name: `description`,
+                        content: metaDescription,
+                    },
+                    {
+                        property: `og:title`,
+                        content: title,
+                    },
+                    {
+                        property: `og:description`,
+                        content: metaDescription,
+                    },
+                    {
+                        property: `og:type`,
+                        content: `website`,
+                    },
+                    {
+                        name: `twitter:card`,
+                        content: `summary`,
+                    },
+                    {
+                        name: `twitter:creator`,
+                        content: site.siteMetadata.author,
+                    },
+                    {
+                        name: `twitter:title`,
+                        content: title,
+                    },
+                    {
+                        name: `twitter:description`,
+                        content: metaDescription,
+                    },
+                    {
+                        name: "keywords",
+                        content: site.siteMetadata.keywords,
+                    },
+                ].concat(meta).map((m) => {
+                    return <meta key={m.name} name={m.name} content={m.content}></meta>;
+                })
+            }
             <script
+                async
                 defer
-                src="https://static.cloudflareinsights.com/beacon.min.js"
-                data-cf-beacon='{"token": "22df997890524f6b8cc73134c39c1191"}'></script>
+                data-domain="kevink.dev"
+                src="https://analytics.kevink.dev/js/plausible.js"
+            ></script>
         </Helmet>
     );
 }

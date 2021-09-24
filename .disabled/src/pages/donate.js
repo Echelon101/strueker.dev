@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import GitHubButton from "react-github-btn";
 
 import * as styles from "./donate.module.scss";
+import { ArrowRight } from "lucide-react";
 
 export const query = graphql`
     query ($language: String!) {
@@ -61,11 +62,15 @@ const DonatePage = (props) => {
 
                     <p style={{ display: "block", textAlign: "center" }}>
                         <GitHubButton
-                            href={"https://github.com/sponsors/" + site.siteMetadata.contactGitHub}
+                            href={
+                                "https://github.com/sponsors/" +
+                                site.siteMetadata.contactGitHub
+                            }
                             data-color-scheme="no-preference: light; light: dark; dark: dark;"
                             data-icon="octicon-heart"
                             data-size="large"
-                            aria-label="Sponsor @Unkn0wnCat on GitHub">
+                            aria-label="Sponsor @Unkn0wnCat on GitHub"
+                        >
                             <Trans>sponsorGitHub</Trans>
                         </GitHubButton>
                     </p>
@@ -103,16 +108,27 @@ const DonatePage = (props) => {
                             "&item_name=" +
                             encodeURIComponent(site.siteMetadata.title) +
                             "&currency_code=EUR&image_url=" +
-                            encodeURIComponent(site.siteMetadata.siteUrl + file.childImageSharp.resize.src) +
+                            encodeURIComponent(
+                                site.siteMetadata.siteUrl +
+                                    file.childImageSharp.resize.src
+                            ) +
                             "&return=" +
-                            encodeURIComponent(site.siteMetadata.siteUrl + "/" + path + "thank-you/") +
+                            encodeURIComponent(
+                                site.siteMetadata.siteUrl +
+                                    "/" +
+                                    path +
+                                    "thank-you/"
+                            ) +
                             "&rm=0&cancel_return=" +
-                            encodeURIComponent(site.siteMetadata.siteUrl + "/" + path) +
+                            encodeURIComponent(
+                                site.siteMetadata.siteUrl + "/" + path
+                            ) +
                             "&amount=" +
                             amount
-                        }>
+                        }
+                    >
                         <span>Donate using PayPal</span>
-                        <i className="fas fa-fw fa-chevron-right" aria-hidden="true"></i>
+                        <ArrowRight/>
                     </a>
                 </article>
             </section>

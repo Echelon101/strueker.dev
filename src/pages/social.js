@@ -5,15 +5,20 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import * as styles from "./social.module.scss";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
     query AllSocialsQuery($language: String!) {
         allSocialsJson {
             nodes {
-                image
                 platformHandle
                 platformName
                 url
+                localImage {
+                    childImageSharp {
+                    gatsbyImageData(height: 300, width: 300)
+                    }
+                }
             }
         }
         locales: allLocale(filter: { language: { eq: $language } }) {
@@ -52,14 +57,20 @@ const SocialPage = ({ data }) => {
                                     href={social.url}
                                     target="_blank"
                                     rel="noreferrer me"
-                                    key={social.url}>
+                                    key={social.url}
+                                >
                                     <div
                                         className={styles.socialImage}
-                                        style={{
-                                            backgroundImage: "url(" + social.image + ")",
-                                        }}>
-                                        <span className={styles.socialName}>{social.platformName}</span>
-                                        <span className={styles.socialUsername}>{social.platformHandle}</span>
+                                    >
+                                        <div className={styles.socialBg}>
+                                            <GatsbyImage image={getImage(social.localImage)}></GatsbyImage>
+                                        </div>
+                                        <span className={styles.socialName}>
+                                            {social.platformName}
+                                        </span>
+                                        <span className={styles.socialUsername}>
+                                            {social.platformHandle}
+                                        </span>
                                     </div>
                                 </a>
                             );

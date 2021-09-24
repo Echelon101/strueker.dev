@@ -1,0 +1,76 @@
+[
+    {
+        "name": "Symfony",
+        "type": "framework",
+        "href": "https://symfony.com/"
+    },
+    {
+        "name": "HTML",
+        "type": "language"
+    },
+    {
+        "name": "Java",
+        "type": "language"
+    },
+    {
+        "name": "MySQL",
+        "type": "language"
+    },
+    {
+        "name": "C#",
+        "type": "language"
+    },
+    {
+        "name": "PHP",
+        "type": "language"
+    },
+    {
+        "name": "Cloudflare Pages",
+        "href": "https://pages.cloudflare.com/",
+        "type": "platform"
+    },
+    {
+        "name": "Microsoft M365",
+        "href": "https://office.com",
+        "type": "platform"
+    },
+    {
+        "name": "Ubuntu Linux",
+        "href": "https://ubuntu.com/",
+        "type": "os"
+    },
+    {
+        "name": "Manjaro Linux",
+        "href": "https://manjaro.org/",
+        "type": "os"
+    },
+    {
+        "name": "Debian Linux",
+        "href": "https://www.debian.org/",
+        "type": "os"
+    },
+    {
+        "name": "Microsoft Windows",
+        "type": "os"
+    },
+    {
+        "name": "JetBrains IDEs",
+        "href": "https://www.jetbrains.com/",
+        "type": "program"
+    },
+    {
+        "name": "Visual Studio Code",
+        "href": "https://code.visualstudio.com/",
+        "type": "program"
+    },
+    {
+        "name": "Docker",
+        "href": "https://www.docker.com/",
+        "type": "program"
+    },
+    {
+        "name": "Microsoft Office",
+        "href": "https://office.com",
+        "type": "program"
+    }
+]

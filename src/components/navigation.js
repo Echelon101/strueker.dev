@@ -46,8 +46,11 @@ const Navigation = ({ isHome }) => {
     return (
         <div
             className={
-                styles.topBar + (isHome ? " " + styles.homeBar : "") + (atTop ? " " + styles.homeBarTransparent : "")
-            }>
+                styles.topBar +
+                (isHome ? " " + styles.homeBar : "") +
+                (atTop ? " " + styles.homeBarTransparent : "")
+            }
+        >
             <nav className={styles.topBarInner}>
                 <StaticQuery
                     query={graphql`
@@ -66,10 +69,18 @@ const Navigation = ({ isHome }) => {
                     )}
                 />
                 <div className="flexSpacer"></div>
-                <Link id="navBtnProjects" to="/projects" activeClassName={styles.active}>
+                <Link
+                    id="navBtnProjects"
+                    to="/projects"
+                    activeClassName={styles.active}
+                >
                     <Trans>projects</Trans>
                 </Link>
-                <Link id="navBtnSocial" to="/social" activeClassName={styles.active}>
+                <Link
+                    id="navBtnSocial"
+                    to="/social"
+                    activeClassName={styles.active}
+                >
                     <Trans>social</Trans>
                 </Link>
             </nav>

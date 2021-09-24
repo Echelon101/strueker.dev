@@ -5,19 +5,21 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import * as styles from "./projects.module.scss";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const query = graphql`
     query GetProjects($language: String) {
-        allProjectsJson(filter: { lang: { eq: $language } }) {
+        allProjectsJson(
+            filter: { lang: { eq: $language } }
+            sort: { fields: date, order: DESC }
+        ) {
             nodes {
                 lang
                 urlname
                 name
                 image {
                     childImageSharp {
-                        resize(width: 400, quality: 90) {
-                            src
-                        }
+                        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
                     }
                 }
                 shortDescription
@@ -55,15 +57,27 @@ const ProjectsPage = ({ data }) => {
                                 <Link
                                     className={styles.projectCard}
                                     key={project.lang + project.urlname}
-                                    to={"/projects/" + project.urlname}>
+                                    to={"/projects/" + project.urlname}
+                                >
                                     <div
                                         className={styles.projectCardImage}
-                                        style={{
-                                            backgroundImage: "url(" + project.image.childImageSharp.resize.src + ")",
-                                        }}>
+                                    >
+                                        <div className={
+                                            styles.projectCardBg
+                                        }>
+                                            <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} objectFit="cover" style={{height: "100%"}}></GatsbyImage>
+                                        </div>
                                         <div className={styles.projectCardMeta}>
-                                            <span className={styles.projectCardTitle}>{project.name}</span>
-                                            <span>{project.shortDescription}</span>
+                                            <span
+                                                className={
+                                                    styles.projectCardTitle
+                                                }
+                                            >
+                                                {project.name}
+                                            </span>
+                                            <span>
+                                                {project.shortDescription}
+                                            </span>
                                         </div>
                                     </div>
                                 </Link>

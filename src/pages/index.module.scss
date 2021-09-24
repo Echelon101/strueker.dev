@@ -20,10 +20,14 @@
     }
 
     .heroSectionBg {
-        /*background: radial-gradient(ellipse at top left, #1f0ba659, transparent),
-            radial-gradient(ellipse at bottom right, #4a086829, transparent);*/
+        /*
+        //OLD
+        background: radial-gradient(ellipse at top left, #1f0ba659, transparent),
+        radial-gradient(ellipse at bottom right, #4a086829, transparent);*/
 
-        /*background: linear-gradient(45deg, #000850 0%, #000320 100%),
+        /*
+        //OLD(new)
+        background: linear-gradient(45deg, #000850 0%, #000320 100%),
             radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
             linear-gradient(225deg, #ff7a00 0%, #000000 100%),
             linear-gradient(
@@ -38,12 +42,16 @@
                 #0f0a3c 100%
             );
         background-blend-mode: screen, overlay, hard-light, normal;*/
+        /*
+        //GRADIENTA v1
         background: linear-gradient(115deg, #000000 0%, #00c508 55%, #000000 100%),
             linear-gradient(115deg, #0057ff 0%, #020077 100%),
             conic-gradient(from 110deg at -5% 35%, #000000 0deg, #faff00 360deg),
             conic-gradient(from 220deg at 30% 30%, #ff0000 0deg, #0000ff 220deg, #240060 360deg),
             conic-gradient(from 235deg at 60% 35%, #0089d7 0deg, #0000ff 180deg, #240060 360deg);
-        background-blend-mode: soft-light, soft-light, overlay, screen, normal;
+        background-blend-mode: soft-light, soft-light, overlay, screen, normal;*/
+        background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%), linear-gradient(236deg, #00C2FF 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+        background-blend-mode: overlay, hard-light, normal;
     }
 
     .heroSectionBgOver {
@@ -95,8 +103,16 @@
         .contactLink {
             transition: text-decoration 0.5s;
             text-decoration: underline dotted rgba(0, 0, 0, 0);
-            padding: 6px 0 6px 25px;
+            padding: 6px 0 6px 0;
             color: $textColor;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 10px;
+                color: $accentColor;
+                flex-shrink: 0;
+            }
 
             @media (pointer: coarse), (pointer: none) {
                 padding-top: 15px;
@@ -169,6 +185,10 @@
 .donationSection,
 .hireMeSection {
     @include homeBanner;
+
+    svg {
+        height: 50px;
+    }
 }
 
 .creditSection {
@@ -180,8 +200,13 @@
         font-size: 1.2em;
         color: white;
 
-        > span > i {
-            line-height: 15px !important;
+        > span {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 10px;
+            }
         }
     }
 }
@@ -192,4 +217,71 @@
     margin: 0 auto;
     margin-top: 40px;
     padding: 10px 20px;
+}
+
+.aboutSection {
+    > article {
+        display: flex;
+        align-items: center;
+
+        > div {
+            width: calc(50% - 40px);
+            flex-shrink: 0;
+        }
+
+        .aboutText {
+            margin-right: 20px;
+        }
+
+        .skills {
+            margin-left: 20px;
+
+            .skillList {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .skill {
+                    border: thin solid currentColor;
+                    border-radius: 100px;
+                    padding: 5px 10px;
+                    margin: 5px;
+
+                    &.skill_framework {
+                        color: #e52b3e;
+                    }
+
+                    &.skill_language {
+                        color: #6848da;
+                    }
+
+                    &.skill_platform {
+                        color: #e5752b;
+                    }
+
+                    &.skill_os {
+                        color: #2b66e5;
+                    }
+
+                    &.skill_program {
+                        color: #18bb20;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+
+            > div {
+                width: 100%;
+            }
+
+            .skills,
+            .aboutText {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
 }
