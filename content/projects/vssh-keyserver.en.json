@@ -3,11 +3,11 @@
     "lang": "en",
     "name": "VSSH Keyserver",
     "shortDescription": "Central hosting of SSH keys",
-    "longDescription": "Webapp to create, manage and distribute SSH keys of Servers. The project is written in symfony 5.0.",
     "links": {
         "website": null,
         "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
     },
     "image": "../images/code.jpg",
-    "featured": 2
+    "featured": 2,
+    "date": "20200818T102100.000+0200"
 }

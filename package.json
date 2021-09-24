@@ -1,26 +1,17 @@
 {
-    "name": "strueker.dev",
+    "name": "kevink.dev",
     "version": "1.1.0",
     "private": true,
-    "description": "Strueker.dev",
-    "author": "Timo Strüker <developer@strueker.net> (https://strueker.dev)",
-    "contributors": [
-        "Kevin Kandlbinder <kevin@kevink.dev> (https://kevink.dev)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Echelon101/strueker.dev"
-    },
+    "description": "KevinK.dev",
+    "author": "Kevin Kandlbinder",
     "keywords": [
         "gatsby"
     ],
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",
-        "build": "gatsby build --prefix-paths",
-        "build:fab": "npm run build && npm run fab:build",
-        "fab:build": "fab build",
-        "fab:serve": "fab serve fab.zip",
+        "build": "gatsby build",
+        "prettier": "npx prettier --write .",
         "serve": "gatsby serve",
         "clean": "gatsby clean"
     },
@@ -28,15 +19,21 @@
     "dependencies": {
         "@babel/cli": "7.15.7",
         "@babel/plugin-transform-typescript": "7.15.4",
+        "@fontsource/anonymous-pro": "4.5.0",
+        "@mdx-js/mdx": "1.6.22",
+        "@mdx-js/react": "1.6.22",
         "animejs": "3.2.1",
         "babel-plugin-i18next-extract": "0.8.3",
         "gatsby": "3.14.0",
         "gatsby-cli": "3.14.0",
         "gatsby-plugin-asset-path": "3.0.4",
+        "gatsby-plugin-image": "1.14.0",
         "gatsby-plugin-manifest": "3.14.0",
+        "gatsby-plugin-mdx": "2.14.0",
         "gatsby-plugin-offline": "4.14.0",
         "gatsby-plugin-react-helmet": "4.14.0",
         "gatsby-plugin-react-i18next": "1.1.1",
+        "gatsby-plugin-remote-images": "3.0.0",
         "gatsby-plugin-robots-txt": "1.6.10",
         "gatsby-plugin-sass": "4.14.0",
         "gatsby-plugin-sharp": "3.14.0",
@@ -46,27 +43,23 @@
         "gatsby-transformer-sharp": "3.14.0",
         "i18next": "21.1.0",
         "locale": "0.1.0",
-        "node-sass": "6.0.1",
+        "lucide-react": "0.16.0",
         "prop-types": "15.7.2",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-github-btn": "1.2.1",
         "react-helmet": "6.1.0",
         "react-i18next": "11.12.0",
+        "sass": "1.42.1",
         "tsparticles": "1.35.1"
     },
     "devDependencies": {
-        "@fab/actions": "1.0.0-rc.3-beta.1",
-        "@fab/cli": "1.0.0-rc.3-beta.1",
-        "@fab/input-static": "1.0.0-rc.3-beta.1",
-        "@fab/plugin-render-html": "1.0.0-rc.3-beta.1",
-        "@fab/plugin-rewire-assets": "1.0.0-rc.3-beta.1",
-        "@fab/server": "1.0.0-rc.3-beta.1",
         "babel-eslint": "10.1.0",
         "eslint": "7.32.0",
         "eslint-loader": "4.0.2",
         "eslint-plugin-import": "2.24.2",
         "eslint-plugin-react": "7.26.0",
-        "gatsby-plugin-eslint": "4.0.0"
+        "gatsby-plugin-eslint": "4.0.0",
+        "prettier": "2.4.1"
     }
 }

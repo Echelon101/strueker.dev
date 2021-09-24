@@ -2,10 +2,9 @@
 module.exports = {
     siteName: "Strueker.dev", //todo Change to VAR
     siteAuthor: "@timomrx",
-    siteURL: "https://strueker.dev",//todo Change to VAR
+    siteURL: "https://strueker.dev", //todo Change to VAR
     payPalMail: "example@example.com",
-    siteKeywords:
-        "Timo Strüker, Timo, Strüker, IT, System Administrator, Developer, PHP, Java, C#",
+    siteKeywords: "Timo Strüker, Timo, Strüker, IT, System Administrator, Developer, PHP, Java, C#",
     iconPath: "src/images/Strueker.dev@10x.png",
     languages: ["en", "de"],
     contactEmail: "developer@strueker.dev",
@@ -14,5 +13,5 @@ module.exports = {
     contactTwitter: "timomrx",
     contactGitHub: "Echelon101",
     contactMastodon: "@timo@1in1.net",
-    contactMastodonHref: "https://mastodon.1in1.net/@timo"
+    contactMastodonHref: "https://mastodon.1in1.net/@timo",
 };

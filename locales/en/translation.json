@@ -10,9 +10,6 @@
     "homeMe": "I am",
     "homeWebDeveloper": "an IT administrator",
     "homeMyLocation": "Hamburg, Germany",
-    "homeAboutMe": "About me",
-    "homeAboutMeHello": "Hello!",
-    "homeAboutMeText": "I am Timo Strüker, an IT specialist and hobby developer from northern Germany. My interest in computers started when I was about seven years old, when I got my first PC with Windows 2000. Since 2016 I have been working professionally with IT systems and in this context I have also developed my interest in programming.",
     "donationCatchphrase": "Like what you're seeing? Consider donating.",
     "homeImageCredit": "Photo taken by Kevin Kandlbinder",
     "de": "German",
@@ -35,5 +32,6 @@
     "seeMore": "View Projects",
     "donateGitHub": "You can very easily support me via GitHub Sponsors using the following button!",
     "donatePayPal": "If you'd rather support me via PayPal the following button is for you:",
-    "sponsorGitHub": "Sponsor using GitHub"
+    "sponsorGitHub": "Sponsor using GitHub",
+    "mySkills": "My Skills"
 }

@@ -10,9 +10,6 @@
     "homeMe": "Ich bin",
     "homeWebDeveloper": "ein Systemadministrator",
     "homeMyLocation": "Hamburg, Deutschland",
-    "homeAboutMe": "Über mich",
-    "homeAboutMeHello": "Hallo!",
-    "homeAboutMeText": "Ich bin Timo Strüker, ein Systemadministrator und Hobby-Entwickler aus Norddeutschland. Mein Interesse an Computern hat mit etwa sieben Jahren begonnen, als ich meinen ersten PC mit Windows 2000 erhalten habe. Seit 2016 beschäftige ich mich beruflich mit IT-Systemen und habe in dem Zusammenhang auch mein Interesse am Programmieren entwicket.",
     "donationCatchphrase": "Gefällt dir was du siehst? Spende doch etwas.",
     "homeImageCredit": "Bild aufgenommen von Kevin Kandlbinder",
     "de": "Deutsch",
@@ -35,5 +32,6 @@
     "seeMore": "Weitere Projekte",
     "donateGitHub": "Du kannst mich mit dem folgenden Button ganz einfach über GitHub Sponsors unterstützen!",
     "donatePayPal": "Wenn du mich lieber über PayPal unterstützen willst ist hier der Button für dich:",
-    "sponsorGitHub": "Über GitHub unterstützen"
+    "sponsorGitHub": "Über GitHub unterstützen",
+    "mySkills": "Meine Fähigkeiten"
 }
