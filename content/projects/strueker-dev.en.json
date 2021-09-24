@@ -3,7 +3,6 @@
     "lang": "en",
     "name": "Strueker.dev",
     "shortDescription": "This site and the code behind the scenes.",
-    "longDescription": "The Website is written on Gatsby and was designed by Kevin Kandlbinder. It represents a personal portfolio for projects.",
     "links": {
         "website": "https://strueker.dev",
         "github": "https://github.com/echelon101/strueker.dev"

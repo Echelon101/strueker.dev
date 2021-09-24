@@ -5,7 +5,7 @@ root = true
 
 [*]
 charset = utf-8
-end_of_line = crlf
+end_of_line = lf
 indent_size = 4
 indent_style = space
 trim_trailing_whitespace = false
@@ -59,8 +59,6 @@ ij_scss_use_double_quotes = true
 ij_scss_value_alignment = 0
 
 [{*.bash,*.sh,*.zsh}]
-indent_size = 2
-tab_width = 2
 ij_shell_binary_ops_start_line = false
 ij_shell_keep_column_alignment_padding = false
 ij_shell_minify_program = false
@@ -68,8 +66,6 @@ ij_shell_redirect_followed_by_space = false
 ij_shell_switch_cases_indented = false
 
 [{*.cjs,*.js}]
-indent_size = 2
-tab_width = 2
 ij_continuation_indent_size = 4
 ij_javascript_align_imports = false
 ij_javascript_align_multiline_array_initializer_expression = false

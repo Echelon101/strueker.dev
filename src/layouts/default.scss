@@ -20,6 +20,12 @@ html,
     color: $textColor;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.25s, color 0.25s;
+
+    @media (prefers-color-scheme: light) {
+        background: $lightBackground;
+        color: $lightTextColor;
+    }
 }
 
 footer {
@@ -28,9 +34,10 @@ footer {
     color: white;
     padding: 5px;
     text-align: center;
+    transition: background-color 0.25s, color 0.25s;
 
     a {
-        color: white;
+        color: inherit;
         text-decoration: underline dotted currentColor;
     }
 }
@@ -70,4 +77,12 @@ article {
 
 h1 {
     font-size: 2em;
+
+    color: $accentColor;
+
+    text-shadow: 0 0 20px rgba($accentColor, 0.15);
+
+    @media (prefers-color-scheme: light) {
+        text-shadow: 0 0 20px rgba($accentColor, 0.3);
+    }
 }

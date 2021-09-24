@@ -3,7 +3,6 @@
     "lang": "en",
     "name": "Strueker.net",
     "shortDescription": "My personal website and the code behind the scenes.",
-    "longDescription": "This project represents a simple website written in gatsby. It's a filler for my main domain.",
     "links": {
         "website": "https://strueker.net",
         "github": "https://github.com/echelon101/strueker.net"

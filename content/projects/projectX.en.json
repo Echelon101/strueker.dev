@@ -3,7 +3,6 @@
     "lang": "en",
     "name": "ProjectX",
     "shortDescription": "Minecraft Forge Server Network Software",
-    "longDescription": "Software to host a Forge Server Network over multiple servers.",
     "links": {
         "website": null,
         "github": null

@@ -6,7 +6,8 @@
     height: 600px;
     overflow: hidden;
 
-    .heroSectionBg, .heroSectionBgOver {
+    .heroSectionBg,
+    .heroSectionBgOver {
         position: absolute;
         width: 100%;
         max-width: unset;
@@ -19,14 +20,39 @@
     }
 
     .heroSectionBg {
-        background: linear-gradient(to bottom, transparent 80%, $background), 
-            radial-gradient(ellipse at top left,rgba(#3a5abc, .2313),transparent), 
-            radial-gradient(ellipse at bottom right,rgba(#071480, .1137),transparent);
-        
+        /*background: radial-gradient(ellipse at top left, #1f0ba659, transparent),
+            radial-gradient(ellipse at bottom right, #4a086829, transparent);*/
+
+        /*background: linear-gradient(45deg, #000850 0%, #000320 100%),
+            radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
+            linear-gradient(225deg, #ff7a00 0%, #000000 100%),
+            linear-gradient(
+                135deg,
+                #cdffeb 10%,
+                #cdffeb 35%,
+                #009f9d 35%,
+                #009f9d 60%,
+                #07456f 60%,
+                #07456f 67%,
+                #0f0a3c 67%,
+                #0f0a3c 100%
+            );
+        background-blend-mode: screen, overlay, hard-light, normal;*/
+        background: linear-gradient(115deg, #000000 0%, #00c508 55%, #000000 100%),
+            linear-gradient(115deg, #0057ff 0%, #020077 100%),
+            conic-gradient(from 110deg at -5% 35%, #000000 0deg, #faff00 360deg),
+            conic-gradient(from 220deg at 30% 30%, #ff0000 0deg, #0000ff 220deg, #240060 360deg),
+            conic-gradient(from 235deg at 60% 35%, #0089d7 0deg, #0000ff 180deg, #240060 360deg);
+        background-blend-mode: soft-light, soft-light, overlay, screen, normal;
     }
 
     .heroSectionBgOver {
         background: linear-gradient(to bottom, transparent 80%, $background);
+        transition: background-image 0.25s;
+
+        @media (prefers-color-scheme: light) {
+            background: linear-gradient(to bottom, transparent 90%, $lightBackground);
+        }
     }
 
     @media (pointer: coarse), (pointer: none) {

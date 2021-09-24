@@ -3,7 +3,6 @@
     "lang": "de",
     "name": "VSSH Keyserver",
     "shortDescription": "Zentrale Verwaltung für SSH Schlüssel",
-    "longDescription": "Webapp zum erstellen, verwalten und verteilen von SSH Schlüsseln. Dieses Projekt wurde in Symfony 5.0 geschireben.",
     "links": {
         "website": null,
         "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
