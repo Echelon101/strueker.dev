@@ -73,12 +73,6 @@ function SEO({ description, meta, title }) {
                     return <meta key={m.name} name={m.name} content={m.content}></meta>;
                 })
             }
-            <script
-                async
-                defer
-                data-domain="kevink.dev"
-                src="https://analytics.kevink.dev/js/plausible.js"
-            ></script>
         </Helmet>
     );
 }
