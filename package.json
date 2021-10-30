@@ -18,7 +18,7 @@
     "license": "Apache-2.0",
     "dependencies": {
         "@babel/cli": "7.16.0",
-        "@babel/plugin-transform-typescript": "7.16.0",
+        "@babel/plugin-transform-typescript": "7.16.1",
         "@fontsource/anonymous-pro": "4.5.0",
         "@fontsource/open-sans": "4.5.1",
         "@mdx-js/mdx": "1.6.22",
