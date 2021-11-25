@@ -61,6 +61,6 @@
         "eslint-plugin-import": "2.25.3",
         "eslint-plugin-react": "7.27.1",
         "gatsby-plugin-eslint": "4.0.2",
-        "prettier": "2.4.1"
+        "prettier": "2.5.0"
     }
 }
