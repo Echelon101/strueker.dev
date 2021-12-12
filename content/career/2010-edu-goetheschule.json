@@ -1,0 +1,17 @@
+{
+    "type": "education",
+    "title": {
+        "en": "Goethe Primary School",
+        "de": "Goethe Grundschule"
+    },
+    "sortDate": "2010-06-01 00:00",
+    "startDate": {
+        "en": "August 2006",
+        "de": "August 2006"
+    },
+    "endDate": {
+        "en": "June 2010",
+        "de": "Juni 2010"
+    },
+    "externalLink": "http://www.goethe-schule-quickborn.de/"
+}

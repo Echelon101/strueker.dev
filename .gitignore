@@ -6,3 +6,7 @@ public
 /fab.zip
 
 /npm-*.log
+
+.eslintcache
+
+.idea/workspace.xml

@@ -1,12 +1,19 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Trans, Link } from "gatsby-plugin-react-i18next";
+import { Trans, Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql, StaticQuery } from "gatsby";
 
 import * as styles from "./navigation.module.scss";
+import { Fade as Hamburger } from "hamburger-react";
+import OffScreenNav from "./offscreenNav";
 
 const Navigation = ({ isHome }) => {
     let [atTop, setAtTop] = useState(false);
+    const [offscreenNavActive, setOffscreenNavActive] = useState(false);
+    const { t } = useTranslation();
+
+    const closeOffscreenNav = () => setOffscreenNavActive(false);
 
     const updateTransparency = () => {
         if (typeof window === "undefined") return;
@@ -46,11 +53,10 @@ const Navigation = ({ isHome }) => {
     return (
         <div
             className={
-                styles.topBar +
-                (isHome ? " " + styles.homeBar : "") +
-                (atTop ? " " + styles.homeBarTransparent : "")
+                styles.topBar + (isHome ? " " + styles.homeBar : "") + (atTop ? " " + styles.homeBarTransparent : "")
             }
         >
+            <OffScreenNav active={offscreenNavActive} close={closeOffscreenNav} />
             <nav className={styles.topBarInner}>
                 <StaticQuery
                     query={graphql`
@@ -63,26 +69,33 @@ const Navigation = ({ isHome }) => {
                         }
                     `}
                     render={(data) => (
-                        <Link to="/" activeClassName={styles.active}>
+                        <Link to="/" activeClassName={styles.active} className={styles.logo}>
                             {data.site.siteMetadata.title}
                         </Link>
                     )}
                 />
                 <div className="flexSpacer"></div>
-                <Link
-                    id="navBtnProjects"
-                    to="/projects"
-                    activeClassName={styles.active}
-                >
-                    <Trans>projects</Trans>
+                <Link to="/about" activeClassName={styles.active}>
+                    <Trans>about.title</Trans>
                 </Link>
-                <Link
-                    id="navBtnSocial"
-                    to="/social"
-                    activeClassName={styles.active}
-                >
-                    <Trans>social</Trans>
+                <Link to="/projects" activeClassName={styles.active}>
+                    <Trans>project.plural</Trans>
                 </Link>
+                <Link to="/social" activeClassName={styles.active}>
+                    <Trans>social.title</Trans>
+                </Link>
+                {/* <Link to="/blog" activeClassName={styles.active}>
+                    <Trans>blog.title</Trans>
+                </Link>*/}
+                <div className={styles.hamburger}>
+                    <Hamburger
+                        toggle={setOffscreenNavActive}
+                        toggled={offscreenNavActive}
+                        rounded
+                        size={30}
+                        label={t("openMenu")}
+                    />
+                </div>
             </nav>
         </div>
     );

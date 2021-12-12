@@ -1,0 +1,21 @@
+{
+    "type": "jobexperience",
+    "title": {
+        "en": "Portal Service GmbH & Co. KG",
+        "de": "Portal Service GmbH & Co. KG"
+    },
+    "sortDate": "2019-06-26 00:00",
+    "startDate": {
+        "en": "August 2016",
+        "de": "August 2016"
+    },
+    "endDate": {
+        "en": "June 2019",
+        "de": "Juni 2019"
+    },
+    "description": {
+        "en": "Computer Science Expert | Subject Area: System Integration",
+        "de": "Fachinformatiker | Fachrichtung: Systemintegration"
+    },
+    "externalLink": "https://www.my-it-works.de/"
+}

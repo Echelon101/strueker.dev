@@ -45,38 +45,35 @@ const DonatePage = (props) => {
     const { site, file } = props.data;
 
     return (
-        <Layout title={t("donate")} description={t("donationCatchphrase")}>
+        <Layout title={t("donate.title")} description={t("about.donationCatchphrase")}>
             <section>
                 <article>
                     <h1>
-                        <Trans>donate</Trans>
+                        <Trans>donate.title</Trans>
                     </h1>
 
                     <p>
-                        <Trans>donateDescription</Trans>
+                        <Trans>donate.description</Trans>
                     </p>
 
                     <p>
-                        <Trans>donateGitHub</Trans>
+                        <Trans>donate.gitHub</Trans>
                     </p>
 
                     <p style={{ display: "block", textAlign: "center" }}>
                         <GitHubButton
-                            href={
-                                "https://github.com/sponsors/" +
-                                site.siteMetadata.contactGitHub
-                            }
+                            href={"https://github.com/sponsors/" + site.siteMetadata.contactGitHub}
                             data-color-scheme="no-preference: light; light: dark; dark: dark;"
                             data-icon="octicon-heart"
                             data-size="large"
                             aria-label="Sponsor @Unkn0wnCat on GitHub"
                         >
-                            <Trans>sponsorGitHub</Trans>
+                            <Trans>donate.sponsorGitHub</Trans>
                         </GitHubButton>
                     </p>
 
                     <p>
-                        <Trans>donatePayPal</Trans>
+                        <Trans>donate.payPal</Trans>
                     </p>
 
                     <div className={styles.priceAmount}>
@@ -108,27 +105,19 @@ const DonatePage = (props) => {
                             "&item_name=" +
                             encodeURIComponent(site.siteMetadata.title) +
                             "&currency_code=EUR&image_url=" +
-                            encodeURIComponent(
-                                site.siteMetadata.siteUrl +
-                                    file.childImageSharp.resize.src
-                            ) +
+                            encodeURIComponent(site.siteMetadata.siteUrl + file.childImageSharp.resize.src) +
                             "&return=" +
-                            encodeURIComponent(
-                                site.siteMetadata.siteUrl +
-                                    "/" +
-                                    path +
-                                    "thank-you/"
-                            ) +
+                            encodeURIComponent(site.siteMetadata.siteUrl + "/" + path + "thank-you/") +
                             "&rm=0&cancel_return=" +
-                            encodeURIComponent(
-                                site.siteMetadata.siteUrl + "/" + path
-                            ) +
+                            encodeURIComponent(site.siteMetadata.siteUrl + "/" + path) +
                             "&amount=" +
                             amount
                         }
                     >
-                        <span>Donate using PayPal</span>
-                        <ArrowRight/>
+                        <span>
+                            <Trans>donate.donatePayPal</Trans>
+                        </span>
+                        <ArrowRight />
                     </a>
                 </article>
             </section>

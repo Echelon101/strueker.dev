@@ -1,11 +1,6 @@
-//@import "~@fontsource/anonymous-pro/index.css";
-//@import "~@fontsource/anonymous-pro/700.css";
 @import "~@fontsource/open-sans/index.css";
 @import "~@fontsource/open-sans/700.css";
-
-@import "../variables";
-
-
+@import "../globals";
 
 * {
     box-sizing: border-box;
@@ -20,6 +15,7 @@ html,
     width: 100%;
     min-height: 100vh;
     font-family: $mainFont;
+    scroll-behavior: smooth;
 }
 
 #gatsby-focus-wrapper {
@@ -71,10 +67,6 @@ section > article,
 }
 
 article {
-    p {
-        text-align: justify;
-    }
-
     a {
         color: $accentColor;
         text-decoration: underline dotted currentColor;

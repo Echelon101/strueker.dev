@@ -1,0 +1,17 @@
+{
+    "type": "jobexperience",
+    "title": {
+        "en": "comdirect bank AG",
+        "de": "comdirect bank AG"
+    },
+    "sortDate": "2015-03-27 00:00",
+    "startDate": {
+        "en": "March 2015",
+        "de": "März 2015"
+    },
+    "description": {
+        "de": "Schülerpraktikum mit Erfahrungen zu IT-Systemen und Webentwicklung",
+        "en": "Student internship with experiences around datacenter infrastructure and administration as well as web development"
+    },
+    "externalLink": "https://www.comdirect.de/"
+}
