@@ -93,9 +93,9 @@ const Navigation = ({ isHome }) => {
                 <Link to="/social" activeClassName={styles.active}>
                     <Trans>social.title</Trans>
                 </Link>
-                <Link to="/blog" activeClassName={styles.active}>
+               {/* <Link to="/blog" activeClassName={styles.active}>
                     <Trans>blog.title</Trans>
-                </Link>
+                </Link>*/}
                 <div className={styles.hamburger}>
                     <Hamburger
                         toggle={setOffscreenNavActive}

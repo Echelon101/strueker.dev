@@ -1,11 +1,12 @@
 {
     "site": {
-        "description": "Hallo, ich bin Kevin Kandlbinder, ein Entwickler und Hobby-Fotograf aus Norddeutschland."
+        "description": "Hallo, ich bin Timo Strüker, ein System Administrator und Hobby-Entwickler aus Norddeutschland."
     },
     "layout": {
         "imprint": "Impressum",
         "datasec": "Datenschutz",
-        "disclaimer": "Disclaimer"
+        "disclaimer": "Disclaimer",
+        "creatorAttribution": "Design von"
     },
     "project": {
         "title": "Projekt",
@@ -20,9 +21,9 @@
         "title": "Home",
         "hello": "Hallo, ich bin",
         "me": "Ich bin",
-        "webDeveloper": "Web Developer",
-        "imageCredit": "Portrait aufgenommen von Jannik Kiel",
-        "myLocation": "Quickborn, Schleswig-Holstein, Deutschland",
+        "webDeveloper": "IT Systemadministrator",
+        "imageCredit": "Bild aufgenommen von Kevin Kandlbinder",
+        "myLocation": "Hamburg, Germany",
         "explore": "Erkunde",
         "myProjects": "meine Projekte",
         "discover": "Entdecke",
@@ -37,7 +38,7 @@
         "featuredProjects": "Vorgestellte Projekte",
         "mySkills": "Meine Fähigkeiten",
         "myCareer": "Mein Werdegang",
-        "birth": "Geboren 03.11.2001"
+        "birth": "Geboren 28.06.1999"
     },
     "social": {
         "title": "Soziales",

@@ -1,17 +1,17 @@
 {
-    "type": "job-experience",
+    "type": "jobexperience",
     "title": {
-        "en": "Edeka Nord",
-        "de": "Edeka Nord"
+        "en": "Kreyenberg GmbH",
+        "de": "Kreyenberg GmbH"
     },
-    "sortDate": "2019-03-01 00:00",
+    "sortDate": "2014-10-10 00:00",
     "startDate": {
-        "en": "March 2019",
-        "de": "März 2019"
+        "en": "October 2014",
+        "de": "Oktober 2014"
     },
     "description": {
-        "de": "Schülerpraktikum mit Erfahrungen in SAP-Administration und -Programmierung, UNIX-Administration, Monitoring und IT-Hilfestellung",
-        "en": "Student internship with experiences in SAP-administration and -development, UNIX-administration, monitoring and IT-support"
+        "de": "Schülerpraktikum mit Erfahrungen in Grundlagen Metalltechnik und koneventionellem Fräsen sowie Einblicke in die CNC Dreherei",
+        "en": "Student internship with experiences in basics of metal technology and conventional milling as well as insight into cnc lathes"
     },
-    "externalLink": "https://verbund.edeka/nord/"
+    "externalLink": "https://kreyenberg.eu/"
 }

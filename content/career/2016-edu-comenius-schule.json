@@ -13,5 +13,9 @@
         "en": "June 2016",
         "de": "Juni 2016"
     },
+    "description": {
+        "de": "Realschulabschluss",
+        "en": "secondary school certificate"
+    },
     "externalLink": "https://www.csquickborn.de/"
 }

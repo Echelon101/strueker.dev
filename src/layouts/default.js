@@ -38,7 +38,7 @@ class Layout extends React.Component {
                     <Link to="/legal/disclaimer" className="spf-link">
                         <Trans i18nKey="layout.disclaimer">Disclaimer</Trans>
                     </Link>{" "}
-                    | <Trans i18nKey="creatorAttribution">This website was designed by</Trans>{" "}
+                    | <Trans i18nKey="layout.creatorAttribution">This website was designed by</Trans>{" "}
                     <a href="https://kevink.dev" target="_blank" rel="noreferrer">
                         Kevin Kandlbinder
                     </a>{" "}

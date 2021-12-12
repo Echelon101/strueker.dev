@@ -25,6 +25,10 @@
         "type": "language"
     },
     {
+        "name": "Powershell",
+        "type": "language"
+    },
+    {
         "name": "Cloudflare Pages",
         "href": "https://pages.cloudflare.com/",
         "type": "platform"

@@ -253,7 +253,7 @@ const AboutPage = (props) => {
                                                 <GraduationCap />
                                             )}
                                             {careerEntry.type ==
-                                                "job-experience" && (
+                                                "jobexperience" && (
                                                 <Briefcase />
                                             )}
                                             {careerEntry.title[lang]}
@@ -291,14 +291,14 @@ const AboutPage = (props) => {
                     </div>
                 </div>
             </section>
-            <Link className={styles.donationSection} to="/donate">
+            {/*<Link className={styles.donationSection} to="/donate">
                 <div>
                     <span>
                         <Trans>about.donationCatchphrase</Trans>
                     </span>
                     <ArrowRight />
                 </div>
-            </Link>
+            </Link>*/}
         </Layout>
     );
 };

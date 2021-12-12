@@ -1,11 +1,13 @@
 {
     "site": {
-        "description": "Hello, I am Kevin Kandlbinder, a developer and hobby photographer from northern Germany."
+        "description": "Hello, I am Timo Strüker, an IT administrator and hobby developer from northern Germany."
     },
     "layout": {
         "imprint": "Imprint",
         "datasec": "Data Protection",
-        "disclaimer": "Disclaimer"
+        "disclaimer": "Disclaimer",
+        "creatorAttribution": "This website was designed by"
+                
     },
     "project": {
         "title": "Project",
@@ -20,9 +22,9 @@
         "title": "Home",
         "hello": "Hello, I am",
         "me": "I am",
-        "webDeveloper": "a web developer",
-        "imageCredit": "Portrait taken by Jannik Kiel",
-        "myLocation": "Quickborn, Schleswig-Holstein, Germany",
+        "webDeveloper": "an IT administrator",
+        "imageCredit": "Photo taken by Kevin Kandlbinder",
+        "myLocation": "Hamburg, Germany",
         "explore": "Explore",
         "myProjects": "my projects",
         "discover": "Discover",
@@ -37,7 +39,7 @@
         "featuredProjects": "Featured Projects",
         "mySkills": "My Skills",
         "myCareer": "My Career-Path",
-        "birth": "Born 03.11.2001"
+        "birth": "Born 28.06.1999"
     },
     "social": {
         "title": "Social",

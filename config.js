@@ -9,7 +9,7 @@ module.exports = {
     languages: ["en", "de"],
     contactEmail: "developer@strueker.dev",
     contactPhone: "+4900000000",
-    address: "25451 Quickborn, Schleswig-Holstein, Germany",
+    address: "22309 Hamburg, Hamburg, Germany",
     mapsLink: "https://goo.gl/maps/8MSgFK6CYpmANVJd8",
     contactTwitter: "timomrx",
     contactGitHub: "Echelon101",
@@ -19,7 +19,7 @@ module.exports = {
     familyName: "Strüker",
     birthDate: "1999-06-28",
     gender: "Male",
-    height: "192 cm",
+    height: "",
     nationality: "Germany",
     personImage: "./content/images/timo.jpg",
     sameAs: [
@@ -27,6 +27,7 @@ module.exports = {
         "https://github.com/Echelon101",
         "https://echelon101.net",
         "https://omendarkly.net",
+        "https://strueker.net",
         "https://twitter.com/@timomrx",
     ],
 };

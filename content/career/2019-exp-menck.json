@@ -1,21 +1,17 @@
 {
-    "type": "job-experience",
+    "type": "jobexperience",
     "title": {
-        "en": "Portal Service GmbH & Co. KG",
-        "de": "Portal Service GmbH & Co. KG"
+        "en": "MENCK GmbH",
+        "de": "MENCK GmbH"
     },
-    "sortDate": "2019-06-26 13:30",
+    "sortDate": "2019-07-15 00:00",
     "startDate": {
-        "en": "August 2016",
-        "de": "August 2016"
-    },
-    "endDate": {
-        "en": "June 2019",
-        "de": "Juni 2019"
+        "en": "July 2019",
+        "de": "July 2019"
     },
     "description": {
-        "en": "Computer Science Expert | Subject Area: System Integration",
-        "de": "Fachinformatiker | Fachrichtung: Systemintegration"
+        "en": "Temporary Job: Tidy up paper archive",
+        "de": "Aushilfe: Papierarchiv aufräumen"
     },
-    "externalLink": "https://www.my-it-works.de/"
+    "externalLink": "https://www.menck.com"
 }

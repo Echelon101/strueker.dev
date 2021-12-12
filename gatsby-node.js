@@ -20,6 +20,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     urlname
                 }
             }
+        }
+    `);
+
+    /*const result = await graphql(`
+        query AllPagesQuery {
+            allProjectsJson {
+                nodes {
+                    lang
+                    urlname
+                }
+            }
 
             blog: allFile(
                 filter: { sourceInstanceName: { eq: "blogContent" } }
@@ -41,7 +52,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 }
             }
         }
-    `);
+    `);*/
 
     if (result.errors) {
         reporter.panicOnBuild(`Error while running GraphQL query.`);
@@ -67,6 +78,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         });
     });
 
+    /*
     activity.setStatus("Generating blog pages...");
 
     const blogListingTemplate = path.resolve(`src/templates/blogListing.js`);
@@ -184,6 +196,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             }
         });
     });
+    */
 
     activity.setStatus("Pages generated.");
     activity.end();

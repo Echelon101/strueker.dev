@@ -11,13 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import anime from "animejs";
 
 import {
-    ArrowRight,
-    AtSign,
-    Camera,
-    Github,
-    Mail,
-    MapPin,
-    Phone,
+
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 //import * as particleConfig from "./index.particles.json";

@@ -66,13 +66,13 @@ module.exports = {
                 name: `projectTextblocks`,
             },
         },
-        {
+        /*{
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/content/blog`,
                 name: `blogContent`,
             },
-        },
+        },*/
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -146,7 +146,7 @@ module.exports = {
                 generateMatchPathRewrites: false,
             },
         },
-        {
+        /*{
             resolve: `gatsby-plugin-feed`,
             options: {
                 query: `
@@ -229,6 +229,6 @@ module.exports = {
                     },
                 ],
             },
-        },
+        },*/
     ],
 };
