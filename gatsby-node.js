@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 const path = require(`path`);
-const { paginate } = require("gatsby-awesome-pagination");
+//const { paginate } = require("gatsby-awesome-pagination");
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage, createRedirect } = actions;
+    const { createPage /*createRedirect*/ } = actions;
 
     const activity = reporter.activityTimer(`Generate pages`);
 
@@ -64,9 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     result.data.allProjectsJson.nodes.forEach((node) => {
         if (node.lang === "ignoreme") return;
 
-        reporter.info(
-            "Creating Page: " + `/${node.lang}/projects/${node.urlname}`
-        );
+        reporter.info("Creating Page: " + `/${node.lang}/projects/${node.urlname}`);
 
         createPage({
             path: `/${node.lang}/projects/${node.urlname}`,

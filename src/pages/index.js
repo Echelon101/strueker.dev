@@ -10,9 +10,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import anime from "animejs";
 
-import {
-
-} from "lucide-react";
+import { ArrowRight, AtSign, Github, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 //import * as particleConfig from "./index.particles.json";
 
@@ -61,10 +59,7 @@ const IndexPage = (props) => {
         if (typeof window === "undefined") return;
 
         anime({
-            targets: [
-                "." + styles.profileCard + " > span",
-                "." + styles.profileCard + " a",
-            ],
+            targets: ["." + styles.profileCard + " > span", "." + styles.profileCard + " a"],
             opacity: [0, 1],
             translateX: [100, 0],
             duration: 250,
@@ -105,16 +100,11 @@ const IndexPage = (props) => {
             }}
         >
             <section className={styles.heroSection}>
-                <div
-                    className={styles.heroSectionBg}
-                    id="particle-container"
-                ></div>
+                <div className={styles.heroSectionBg} id="particle-container"></div>
                 <div className={styles.profile + " profile"}>
                     <div className={styles.profileImage}>
                         <StaticImage
-                            src={
-                                "../../content/images/timo.jpg"
-                            }
+                            src={"../../content/images/timo.jpg"}
                             width={250}
                             height={350}
                             placeholder="blurred"
@@ -143,20 +133,11 @@ const IndexPage = (props) => {
                                 <Phone width={20} />
                                 {meta.contactPhone}
                             </a>*/}
-                            <a
-                                className={styles.contactLink}
-                                href={"mailto:" + meta.contactEmail}
-                                rel="me"
-                            >
+                            <a className={styles.contactLink} href={"mailto:" + meta.contactEmail} rel="me">
                                 <Mail width={20} />
                                 {meta.contactEmail}
                             </a>
-                            <a
-                                className={styles.contactLink}
-                                href={meta.mapsLink}
-                                rel="noreferrer "
-                                target="_blank"
-                            >
+                            <a className={styles.contactLink} href={meta.mapsLink} rel="noreferrer " target="_blank">
                                 <MapPin width={20} />
                                 <Trans>home.myLocation</Trans>
                             </a>
@@ -171,9 +152,7 @@ const IndexPage = (props) => {
                             </a>
                             <a
                                 className={styles.contactLink}
-                                href={
-                                    "https://github.com/" + meta.contactGitHub
-                                }
+                                href={"https://github.com/" + meta.contactGitHub}
                                 rel="noreferrer me"
                                 target="_blank"
                             >
@@ -187,27 +166,21 @@ const IndexPage = (props) => {
                 <div className={styles.landingCta}>
                     <Link to={"/projects"}>
                         <div>
-                            <span className={styles.ctaAccent}>
-                                {t("home.explore")}
-                            </span>{" "}
+                            <span className={styles.ctaAccent}>{t("home.explore")}</span>{" "}
                             <span>{t("home.myProjects")}</span>
                         </div>
                         <ArrowRight />
                     </Link>
                     <Link to={"/social"}>
                         <div>
-                            <span className={styles.ctaAccent}>
-                                {t("home.discover")}
-                            </span>{" "}
+                            <span className={styles.ctaAccent}>{t("home.discover")}</span>{" "}
                             <span>{t("home.mySocials")}</span>
                         </div>
                         <ArrowRight />
                     </Link>
                     <Link to={"/about"}>
                         <div>
-                            <span className={styles.ctaAccent}>
-                                {t("home.learn")}
-                            </span>{" "}
+                            <span className={styles.ctaAccent}>{t("home.learn")}</span>{" "}
                             <span>{t("home.moreAboutMe")}</span>
                         </div>
                         <ArrowRight />
