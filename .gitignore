@@ -8,3 +8,5 @@ public
 /npm-*.log
 
 .eslintcache
+
+.idea/workspace.xml
