@@ -16,7 +16,7 @@ export const query = graphql`
                 url
                 localImage {
                     childImageSharp {
-                    gatsbyImageData(height: 300, width: 300)
+                        gatsbyImageData(height: 300, width: 300)
                     }
                 }
             }
@@ -36,15 +36,15 @@ export const query = graphql`
 const SocialPage = ({ data }) => {
     const { t } = useI18next();
     return (
-        <Layout title={t("social")} description={t("socialDescription")}>
+        <Layout title={t("social.title")} description={t("social.description")}>
             <section>
                 <article>
                     <h1>
-                        <Trans>social</Trans>
+                        <Trans>social.title</Trans>
                     </h1>
 
                     <p>
-                        <Trans i18nKey="socialDescriptionWithLink">
+                        <Trans i18nKey="social.descriptionWithLink">
                             socialDescriptionWith<Link to="/friends">Link</Link>
                         </Trans>
                     </p>
@@ -59,11 +59,13 @@ const SocialPage = ({ data }) => {
                                     rel="noreferrer me"
                                     key={social.url}
                                 >
-                                    <div
-                                        className={styles.socialImage}
-                                    >
+                                    <div className={styles.socialImage}>
                                         <div className={styles.socialBg}>
-                                            <GatsbyImage image={getImage(social.localImage)}></GatsbyImage>
+                                            <GatsbyImage
+                                                image={getImage(
+                                                    social.localImage
+                                                )}
+                                            ></GatsbyImage>
                                         </div>
                                         <span className={styles.socialName}>
                                             {social.platformName}

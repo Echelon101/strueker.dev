@@ -1,37 +1,97 @@
 {
-    "siteDescription": "Hallo, ich bin Timo Strüker, ein System Administrator und Hobby-Entwickler aus Norddeutschland.",
-    "imprint": "Impressum",
-    "datasec": "Datenschutz",
-    "disclaimer": "Disclaimer",
-    "projects": "Projekte",
-    "project": "Projekt",
-    "social": "Soziales",
-    "homeHello": "Hallo, ich bin",
-    "homeMe": "Ich bin",
-    "homeWebDeveloper": "ein Systemadministrator",
-    "homeMyLocation": "Hamburg, Deutschland",
-    "donationCatchphrase": "Gefällt dir was du siehst? Spende doch etwas.",
-    "homeImageCredit": "Bild aufgenommen von Kevin Kandlbinder",
-    "de": "Deutsch",
-    "en": "Englisch",
-    "projectAboutHeader": "Über {{projectName}}",
-    "projectViewGitHub": "Auf GitHub anschauen",
-    "projectViewWebsite": "Projekt-Website anschauen",
-    "projectsDescription": "Das ist woran ich grade arbeite oder woran ich gearbeitet habe.",
-    "projectView": "Anschauen",
-    "socialDescriptionWithLink": "Finde mich auf anderen Plattformen oder <1>besuche meine Freunde</1>!",
-    "socialDescription": "Finde mich auf anderen Plattformen!",
-    "friends": "Freunde",
-    "friendsDescription": "Hier findest du die Webseiten meiner Freunde. Viel Spaß beim Erkunden.",
-    "donateThanksText": "Ich finde es schön, dass du meine Arbeit schön findest und das zeigst! Sende mir gerne eine E-Mail an <1>{{contactEmail}}</1> wenn du mit mir über irgendwas reden möchtest!",
-    "donateThanks": "Danke für die Spende!",
-    "donateDescription": "Hey! Es sieht so aus als würdest du über eine Spende nachdenken. Das ist nett! Wenn du ein bestimmtes Projekt unterstützen willst, schreibe deine Wünsche gerne in den Spendenkommentar.",
-    "donate": "Spenden",
-    "creatorAttribution": "Design von",
-    "featuredProjects": "Vorgestellte Projekte",
-    "seeMore": "Weitere Projekte",
-    "donateGitHub": "Du kannst mich mit dem folgenden Button ganz einfach über GitHub Sponsors unterstützen!",
-    "donatePayPal": "Wenn du mich lieber über PayPal unterstützen willst ist hier der Button für dich:",
-    "sponsorGitHub": "Über GitHub unterstützen",
-    "mySkills": "Meine Fähigkeiten"
+    "site": {
+        "description": "Hallo, ich bin Kevin Kandlbinder, ein Entwickler und Hobby-Fotograf aus Norddeutschland."
+    },
+    "layout": {
+        "imprint": "Impressum",
+        "datasec": "Datenschutz",
+        "disclaimer": "Disclaimer"
+    },
+    "project": {
+        "title": "Projekt",
+        "plural": "Projekte",
+        "aboutHeader": "Über {{projectName}}",
+        "viewGitHub": "Auf GitHub anschauen",
+        "viewWebsite": "Projekt-Website anschauen",
+        "description": "Das ist woran ich grade arbeite oder woran ich gearbeitet habe.",
+        "view": "Anschauen"
+    },
+    "home": {
+        "title": "Home",
+        "hello": "Hallo, ich bin",
+        "me": "Ich bin",
+        "webDeveloper": "Web Developer",
+        "imageCredit": "Portrait aufgenommen von Jannik Kiel",
+        "myLocation": "Quickborn, Schleswig-Holstein, Deutschland",
+        "explore": "Erkunde",
+        "myProjects": "meine Projekte",
+        "discover": "Entdecke",
+        "mySocials": "meine Accounts",
+        "learn": "Erfahre",
+        "moreAboutMe": "mehr über mich"
+    },
+    "about": {
+        "title": "Über",
+        "donationCatchphrase": "Gefällt dir was du siehst? Spende doch etwas.",
+        "moreProjects": "Mehr Projekte erkunden",
+        "featuredProjects": "Vorgestellte Projekte",
+        "mySkills": "Meine Fähigkeiten",
+        "myCareer": "Mein Werdegang",
+        "birth": "Geboren 03.11.2001"
+    },
+    "social": {
+        "title": "Soziales",
+        "descriptionWithLink": "Finde mich auf anderen Plattformen oder <1>besuche meine Freunde</1>!",
+        "description": "Finde mich auf anderen Plattformen!"
+    },
+    "friends": {
+        "title": "Freunde",
+        "description": "In dieser Liste stehen Freunde von mir und meiner Seite. Schau doch bei ihnen mal rein, wenn du mehr interessante Projekte sehen willst."
+    },
+    "donate": {
+        "title": "Spenden",
+        "description": "Hey! Es sieht so aus als würdest du über eine Spende nachdenken. Das ist nett! Wenn du ein bestimmtes Projekt unterstützen willst, schreibe deine Wünsche gerne in den Spendenkommentar.",
+        "thanks": "Danke für die Spende!",
+        "thanksText": "Ich finde es schön, dass du meine Arbeit schön findest und das zeigst! Sende mir gerne eine E-Mail an <1>{{contactEmail}}</1> wenn du mit mir über irgendwas reden möchtest!",
+        "gitHub": "Du kannst mich mit dem folgenden Button ganz einfach über GitHub Sponsors unterstützen!",
+        "payPal": "Wenn du mich lieber über PayPal unterstützen willst ist hier der Button für dich:",
+        "sponsorGitHub": "Über GitHub unterstützen",
+        "donatePayPal": "Über PayPal spenden"
+    },
+    "menu": "Menü",
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen",
+    "language": {
+        "en": {
+            "name": "Englisch"
+        },
+        "de": {
+            "name": "Deutsch"
+        }
+    },
+    "blog": {
+        "title": "Blog",
+        "readFull": "Ganzen Post lesen »",
+        "meta": "Gepostet am {{date}} von {{author}}",
+        "page": "Seite {{page}}/{{maxPage}}",
+        "previous": "Zurück",
+        "next": "Weiter",
+        "section": {
+            "blog": {
+                "name": "Blog",
+                "description": "Begleite mich in meinem spannendem Leben!"
+            },
+            "scambox": {
+                "name": "Scambox",
+                "description": "Tauche mit mir ein in die Welt der Scams, die ich tagtäglich so bekomme, und lach ein bisschen mit mir!"
+            }
+        },
+        "sections": "Rubriken",
+        "posts": "Beiträge"
+    },
+    "not_found": {
+        "title": "Nicht Gefunden",
+        "titleExt": "Seite Nicht Gefunden",
+        "text": "Ups... Diese Seite existiert nicht, also gehen wir am besten <1>zurück zur Startseite</1> und probieren es nochmal."
+    }
 }

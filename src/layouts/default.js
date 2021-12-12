@@ -16,7 +16,11 @@ class Layout extends React.Component {
                     lang={this.props.lang}
                     meta={this.props.meta}
                     title={this.props.title}
-                />
+                    image={this.props.image}
+                    speakable={this.props.speakable}
+                >
+                    {this.props.seoAdditional ?? null}
+                </SEO>
                 <Navigation isHome={this.props.transparentTopbar} />
                 <div id="content" role="main">
                     {this.props.children}
@@ -24,15 +28,15 @@ class Layout extends React.Component {
                 <footer role="contentinfo">
                     &copy; Timo Strüker,{" "}
                     <Link to="/legal/about" className="spf-link">
-                        <Trans i18nKey="imprint">Imprint</Trans>
+                        <Trans i18nKey="layout.imprint">Imprint</Trans>
                     </Link>{" "}
                     |{" "}
                     <Link to="/legal/datasec" className="spf-link">
-                        <Trans i18nKey="datasec">Data Protection</Trans>
+                        <Trans i18nKey="layout.datasec">Data Protection</Trans>
                     </Link>{" "}
                     |{" "}
                     <Link to="/legal/disclaimer" className="spf-link">
-                        <Trans i18nKey="disclaimer">Disclaimer</Trans>
+                        <Trans i18nKey="layout.disclaimer">Disclaimer</Trans>
                     </Link>{" "}
                     | <Trans i18nKey="creatorAttribution">This website was designed by</Trans>{" "}
                     <a href="https://kevink.dev" target="_blank" rel="noreferrer">
@@ -61,6 +65,9 @@ Layout.propTypes = {
     title: PropTypes.string.isRequired,
     transparentTopbar: PropTypes.bool,
     children: PropTypes.any.isRequired,
+    seoAdditional: PropTypes.any,
+    image: PropTypes.string,
+    speakable: PropTypes.any,
 };
 
 export default Layout;

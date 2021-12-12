@@ -1,4 +1,17 @@
-@import "./variables";
+$layoutWidth: 1200px;
+$accentColor: #4e9bc6;
+$accentColorDarker: darken($accentColor, 5);
+$background: #070707;
+$lightBackground: #fff;
+$textColor: white;
+$lightTextColor: black;
+$layoutPadding: 20px;
+$noticeColor: rgba(#e52b3e, 0.15);
+
+$defaultShadowColor: #1e347e;
+
+$mainFont: "Open Sans", sans-serif;
+
 
 @mixin flexList {
     display: flex;
@@ -9,8 +22,9 @@
 @mixin cardGeneric {
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: -1px 11px 33px -10px rgba(127, 127, 127, 0.3);
-    transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s, color 0.25s;
+    box-shadow: -1px 11px 33px -10px rgba(27, 27, 27, 0.3);
+    transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s,
+        color 0.25s;
     color: $textColor;
     text-decoration: none;
     margin: 20px;
@@ -42,14 +56,19 @@
     display: flex;
     padding: 10px;
     text-align: center;
-    background: $accentColor;
+    background: $accentColorDarker;
     color: white;
     text-decoration: none;
     box-shadow: 0 0 33px -10px rgba($accentColor, 0.5);
     transition: box-shadow 0.25s;
     align-items: center;
     justify-content: center;
-    
+    text-shadow: 0 0 10px black;
+
+    @media (prefers-color-scheme: light) {
+        background-color: $accentColor;
+    }
+
     svg {
         margin-left: 10px;
     }

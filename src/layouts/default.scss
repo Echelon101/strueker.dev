@@ -1,8 +1,6 @@
-@import "~@fontsource/anonymous-pro/index.css";
-@import "~@fontsource/anonymous-pro/700.css";
-@import "../variables";
-
-
+@import "~@fontsource/fira-code/index.css";
+@import "~@fontsource/fira-code/700.css";
+@import "../globals";
 
 * {
     box-sizing: border-box;
@@ -17,6 +15,7 @@ html,
     width: 100%;
     min-height: 100vh;
     font-family: $mainFont;
+    scroll-behavior: smooth;
 }
 
 #gatsby-focus-wrapper {
@@ -68,10 +67,6 @@ section > article,
 }
 
 article {
-    p {
-        text-align: justify;
-    }
-
     a {
         color: $accentColor;
         text-decoration: underline dotted currentColor;

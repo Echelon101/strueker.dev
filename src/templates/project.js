@@ -24,8 +24,12 @@ export const query = graphql`
                 }
                 image {
                     childImageSharp {
-                        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+                        gatsbyImageData(
+                            placeholder: BLURRED
+                            layout: FULL_WIDTH
+                        )
                     }
+                    publicURL
                 }
                 shortDescription
             }
@@ -62,20 +66,25 @@ const ProjectTemplate = ({ data }) => {
     return (
         <Layout
             description={project.shortDescription}
-            title={t("project") + ": " + projectName}
+            title={t("project.title") + ": " + projectName}
             transparentTopbar={true}
+            image={project.image.publicURL}
         >
             <section className={styles.projectHeader}>
                 <div style={{ paddingTop: 0 }}>
-                    <div
-                        className={styles.headerBackground}
-                    >
-                       <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} style={{width: "100%", height: "100%"}} objectFit="cover"></GatsbyImage> 
+                    <div className={styles.headerBackground}>
+                        <GatsbyImage
+                            image={
+                                project.image.childImageSharp.gatsbyImageData
+                            }
+                            style={{ width: "100%", height: "100%" }}
+                            objectFit="cover"
+                        ></GatsbyImage>
                     </div>
                     <header>
                         <div className={styles.headerInner}>
                             <h1>
-                                <Trans>project</Trans>: {projectName}
+                                <Trans>project.title</Trans>: {projectName}
                             </h1>
                             <span>{project.shortDescription}</span>
                         </div>
@@ -101,8 +110,8 @@ const ProjectTemplate = ({ data }) => {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    <Github height={15}/>{" "}
-                                    <Trans>projectViewGitHub</Trans>
+                                    <Github height={15} />{" "}
+                                    <Trans>project.viewGitHub</Trans>
                                 </a>
                             ) : null}
                             {project.links.website !== null ? (
@@ -111,8 +120,8 @@ const ProjectTemplate = ({ data }) => {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    <ExternalLink height={15}/>{" "}
-                                    <Trans>projectViewWebsite</Trans>
+                                    <ExternalLink height={15} />{" "}
+                                    <Trans>project.viewWebsite</Trans>
                                 </a>
                             ) : null}
                         </div>

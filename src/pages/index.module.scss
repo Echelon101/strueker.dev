@@ -1,22 +1,35 @@
-@import "../variables";
-@import "../mixins";
+@import "../globals";
 
 .heroSection {
     width: 100%;
-    height: 600px;
+    flex-grow: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    //scroll-snap-align: start;
+    padding-top: 100px;
+    position: relative;
 
     .heroSectionBg,
     .heroSectionBgOver {
         position: absolute;
         width: 100%;
         max-width: unset;
-        height: 600px;
+        height: 100%;
         padding: 0;
+        top: 0;
+        left: 0;
 
-        @media (pointer: coarse), (pointer: none) {
-            height: 700px;
+        > canvas {
+            opacity: 0;
         }
+    }
+
+    .spacer {
+        flex-grow: 1;
+        padding: 0;
+        margin: 0;
     }
 
     .heroSectionBg {
@@ -55,16 +68,63 @@
     }
 
     .heroSectionBgOver {
-        background: linear-gradient(to bottom, transparent 80%, $background);
-        transition: background-image 0.25s;
+        bottom: 0;
+        height: 150px;
+
+        @media (max-width: 950px) {
+            display: none;
+        }
 
         @media (prefers-color-scheme: light) {
-            background: linear-gradient(to bottom, transparent 90%, $lightBackground);
+            background-color: $lightBackground;
         }
     }
 
-    @media (pointer: coarse), (pointer: none) {
-        height: 700px;
+    .landingCta {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            bottom: 0;
+        }
+
+        a {
+            @include cardGeneric;
+            display: flex;
+            padding: $layoutPadding;
+            background-color: $background;
+            margin: $layoutPadding;
+            color: $textColor;
+            font-size: 1.6em;
+            text-decoration: none;
+            border-radius: 10px;
+            align-items: center;
+
+            @media (max-width: 1000px) {
+                margin: 10px;
+                font-size: 1.2em;
+            }
+
+            > svg {
+                margin-left: $layoutPadding;
+                flex-shrink: 0;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                flex-shrink: 0;
+
+                .ctaAccent {
+                    color: $accentColor;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     .profile {
@@ -72,9 +132,7 @@
         left: 50%;
         width: calc(90% - 40px);
         max-width: 600px;
-        max-height: 400px;
         transform: translate(-50%, 0%);
-        top: 100px;
 
         .hello {
             font-weight: 100;
@@ -85,7 +143,7 @@
 
         .name {
             font-weight: 100;
-            font-size: 2em;
+            font-size: 1.8em;
             display: block;
         }
 
@@ -102,7 +160,7 @@
 
         .contactLink {
             transition: text-decoration 0.5s;
-            text-decoration: underline dotted rgba(0, 0, 0, 0);
+            text-decoration: underline dotted rgba(white, 0);
             padding: 6px 0 6px 0;
             color: $textColor;
             display: flex;
@@ -122,7 +180,7 @@
 
         .contactLink:hover,
         .contactLink:active {
-            text-decoration: underline dotted rgba(0, 0, 0, 0.5);
+            text-decoration: underline dotted rgba(white, 0.5);
         }
 
         .contactLink > i {
@@ -167,7 +225,7 @@
             clip-path: polygon(14% 4%, 95% 1%, 88% 96%, 2% 89%);
         }
 
-        @media (max-width: 590px) {
+        @media (max-width: 690px) {
             .profileImage,
             .profileImageDummy {
                 display: none;
@@ -222,7 +280,7 @@
 .aboutSection {
     > article {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
 
         > div {
             width: calc(50% - 40px);
@@ -251,20 +309,42 @@
                         color: #e52b3e;
                     }
 
-                    &.skill_language {
-                        color: #6848da;
-                    }
-
                     &.skill_platform {
                         color: #e5752b;
                     }
 
-                    &.skill_os {
-                        color: #2b66e5;
-                    }
-
                     &.skill_program {
                         color: #18bb20;
+                    }
+
+                    &.skill_os {
+                        color: #6d94e9;
+                    }
+
+                    &.skill_language {
+                        color: #886af5;
+                    }
+
+                    @media (prefers-color-scheme: light) {
+                        &.skill_os {
+                            color: #2b66e5;
+                        }
+
+                        &.skill_language {
+                            color: #6848da;
+                        }
+
+                        &.skill_framework {
+                            color: #db1e31;
+                        }
+
+                        &.skill_platform {
+                            color: #aa4f12;
+                        }
+
+                        &.skill_program {
+                            color: #17681b;
+                        }
                     }
                 }
             }
@@ -281,6 +361,152 @@
             .aboutText {
                 margin-left: 0;
                 margin-right: 0;
+            }
+        }
+    }
+}
+
+.careerContainer {
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    padding-bottom: 40px;
+
+    .birth {
+        position: absolute;
+        bottom: 0;
+        left: 7.5px;
+        display: flex;
+        align-items: center;
+
+        > svg {
+            margin-right: $layoutPadding;
+        }
+    }
+
+    .mainline {
+        position: absolute;
+        top: 10px;
+        left: 17px;
+        width: 5px;
+        height: calc(100% - 40px);
+        background-color: $accentColor;
+        border-radius: 100px;
+        box-shadow: 0 0 15px 0 rgba(229, 43, 62, 0.25);
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: $accentColor;
+            border-radius: 100px;
+            box-shadow: 0 0 15px 0 rgba(229, 43, 62, 0.25);
+        }
+
+        /*&::after {
+          content: " ";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 5px;
+          height: 5px;
+          background-color: $accentColor;
+          border-radius: 100px;
+          box-shadow: 0 0 15px 0 rgba(229, 43, 62, 0.25);
+        }*/
+    }
+
+    .entry {
+        position: relative;
+        margin: 20px 10px;
+
+        --entry-color: #{$accentColor};
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            transform: translate(0, -50%);
+            content: " ";
+            border: 5px solid var(--entry-color);
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+        }
+
+        &::after {
+            position: absolute;
+            left: 18px;
+            top: 10px;
+            transform: translate(0, -50%);
+            content: " ";
+            background-color: var(--entry-color);
+            width: 25px;
+            height: 5px;
+            border-radius: 100px;
+        }
+
+        > .entryContent {
+            margin-left: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                display: flex;
+                color: var(--entry-color);
+                font-size: 1.7em;
+                font-weight: 700;
+                margin-bottom: $layoutPadding;
+                align-items: center;
+
+                > svg {
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 25px;
+                    flex-shrink: 0;
+                }
+            }
+
+            .date {
+                opacity: 0.75;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: var(--entry-color);
+                text-decoration: underline dotted currentColor;
+
+                > svg {
+                    margin-right: 5px;
+                }
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: $layoutPadding;
+            }
+        }
+
+        &.entryTypeeducation {
+            --entry-color: #5070ff;
+            @media (prefers-color-scheme: light) {
+                --entry-color: #2347e9;
             }
         }
     }
