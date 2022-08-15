@@ -1526,7 +1526,7 @@
   resolved "https://registry.yarnpkg.com/@fontsource/encode-sans/-/encode-sans-4.5.7.tgz#57bc90180fe816665b1f761485593edc49efc6fa"
   integrity sha512-Jfu/9+a7guSj2fiy8ee2quQYJhsR+t59LCDRmQKfMt6G9/CVL61pwLPZEmS1gb9AWx0HP94R85CDYdm1q8Imiw==
 
-"@fontsource/open-sans@^4.5.11":
+"@fontsource/open-sans@4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.11.tgz#1e9f4346599bdc7752b741d17ee30ef4ebbc15e6"
   integrity sha512-nG0gmbx4pSr8wltdG/ZdlS6OrsMK40Wt6iyuLTKHEf0TQfzKRMlWaskZHdeuWCwS6WUgqHKMf9KSwGdxPfapOg==
