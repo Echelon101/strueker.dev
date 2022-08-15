@@ -41,7 +41,7 @@ const Layout = ({
                 {children}
             </div>
             <footer role="contentinfo">
-                CC-BY 4.0 Kevin Kandlbinder,{" "}
+                &copy; Timo Strüker,{" "}
                 <Link to="/legal/about/" className="spf-link">
                     <Trans i18nKey="layout.imprint">Imprint</Trans>
                 </Link>{" "}
@@ -53,6 +53,13 @@ const Layout = ({
                 <Link to="/legal/disclaimer/" className="spf-link">
                     <Trans i18nKey="layout.disclaimer">Disclaimer</Trans>
                 </Link>{" "}
+                |{" "}
+                <Trans i18nKey="layout.creatorAttribution">
+                    This website was designed by
+                </Trans>{" "}
+                <a href="https://kevink.dev" target="_blank" rel="noreferrer">
+                    Kevin Kandlbinder
+                </a>{" "}
                 | <a href="#languageChooser">Language</a>
             </footer>
 

@@ -1,0 +1,17 @@
+{
+    "type": "internship",
+    "title": {
+        "en": "Kreyenberg GmbH",
+        "de": "Kreyenberg GmbH"
+    },
+    "sortDate": "2014-10-10 00:00",
+    "startDate": {
+        "en": "October 2014",
+        "de": "Oktober 2014"
+    },
+    "description": {
+        "de": "Schülerpraktikum mit Erfahrungen in Grundlagen Metalltechnik und koneventionellem Fräsen sowie Einblicke in die CNC Dreherei",
+        "en": "Student internship with experiences in basics of metal technology and conventional milling as well as insight into cnc lathes"
+    },
+    "externalLink": "https://kreyenberg.eu/"
+}

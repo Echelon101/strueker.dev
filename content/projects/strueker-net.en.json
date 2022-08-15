@@ -1,0 +1,12 @@
+{
+    "urlname": "strueker-net",
+    "lang": "en",
+    "name": "Strueker.net",
+    "shortDescription": "My personal website and the code behind the scenes.",
+    "links": {
+        "website": "https://strueker.net",
+        "github": "https://github.com/echelon101/strueker.net"
+    },
+    "image": "../images/strueker.net.jpg",
+    "date": "20201225T102101.000+0200"
+}

@@ -1,0 +1,13 @@
+{
+    "urlname": "vssh-keyserver",
+    "lang": "de",
+    "name": "VSSH Keyserver",
+    "shortDescription": "Zentrale Verwaltung für SSH Schlüssel",
+    "links": {
+        "website": null,
+        "github": "https://github.com/ValkyrieDevelopment/VSSH-keyserver"
+    },
+    "image": "../images/code.jpg",
+    "featured": 2,
+    "date": "20200818T102100.000+0200"
+}

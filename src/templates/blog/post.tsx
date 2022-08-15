@@ -115,7 +115,7 @@ const Chat = ({ src, type }) => {
         </div>
     );
 };
-
+/*
 export const query = graphql`
     query ($language: String!, $mdxId: String!) {
         mdx(id: { eq: $mdxId }) {
@@ -150,5 +150,5 @@ export const query = graphql`
         }
     }
 `;
-
+*/
 export default BlogPost;

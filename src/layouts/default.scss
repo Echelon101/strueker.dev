@@ -1,8 +1,8 @@
-@use "@fontsource/encode-sans/scss/mixins" as EncodeSans;
+@use "@fontsource/open-sans/scss/mixins" as OpenSans;
 @import-normalize;
 @import "../globals";
 
-@include EncodeSans.fontFaceVariable($type: "wghtOnly");
+@include OpenSans.fontFaceVariable($type: "wghtOnly");
 
 :root {
     @include vars;

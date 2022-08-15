@@ -29,17 +29,17 @@ export default function ImprintPage() {
 
                     <p>Angaben gemäß § 5 TMG</p>
                     <p>
-                        Kevin Kandlbinder
+                        Timo Strüker
                         <br />
-                        Eichenweg 48
+                        Meister-Francke-Straße 22
                         <br />
-                        25451 Quickborn <br />
+                        22309 Hamburg <br />
                     </p>
                     <p>
                         {" "}
                         <strong>Vertreten durch: </strong>
                         <br />
-                        Kevin Kandlbinder
+                        Timo Strüker
                         <br />
                     </p>
                     <p>
@@ -47,8 +47,8 @@ export default function ImprintPage() {
                         Telefon: +49 4106 8068004
                         <br />
                         E-Mail:{" "}
-                        <a href="mailto:contact@kevink.dev">
-                            contact@kevink.dev
+                        <a href="mailto:developer@strueker.net">
+                            developer@strueker.net
                         </a>
                         <br />
                     </p>

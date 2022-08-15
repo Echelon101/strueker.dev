@@ -1,0 +1,13 @@
+{
+    "urlname": "cmdbl",
+    "lang": "de",
+    "name": "CMDBL-IT-Services GmbH",
+    "shortDescription": "Managed IT Dienstleistungen",
+    "links": {
+        "website": "https://commandblock.net",
+        "github": "https://github.com/cmdbl"
+    },
+    "image": "../images/dc_rack.jpg",
+    "featured": 0,
+    "date": "20191110T200001.000+0200"
+}

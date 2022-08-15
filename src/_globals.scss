@@ -3,10 +3,11 @@
 $layoutWidth: 1100px;
 $layoutPadding: 20px;
 
-$mainFont: "Encode SansVariable", sans-serif;
+$mainFont: "Open SansVariable", sans-serif;
 
 $theme: (
-    "accent": #e52b3e,
+    "accent": #4e9bc6,
+    "defaultShadow": #1e347e,
     "background": #070707,
     "text": white,
     "red": #e52b3e,
@@ -17,7 +18,8 @@ $theme: (
 );
 
 $theme-light: (
-    "accent": #e52b3e,
+    "accent": #4e9bc6,
+    "defaultShadow": #1e347e,
     "background": white,
     "text": black,
     "red": #db1e31,
@@ -48,11 +50,17 @@ $aboutCVShadow: 0 0 15px 0 var(--color-accent-shadow-profile);
 @mixin vars {
     --color-accent: #{map.get($theme, "accent")};
     --color-accent-darker: #{darken(map.get($theme, "accent"), 5)};
-    --color-accent-shadow: #{rgba(map.get($theme, "accent"), 0.15)};
-    --color-accent-shadow-button: #{rgba(map.get($theme, "accent"), 0.5)};
-    --color-accent-shadow-button-hover: #{rgba(map.get($theme, "accent"), 0.9)};
-    --color-accent-shadow-hover: #{rgba(map.get($theme, "accent"), 0.75)};
-    --color-accent-shadow-profile: #{rgba(map.get($theme, "accent"), 0.25)};
+    --color-accent-shadow: #{rgba(map.get($theme, "defaultShadow"), 0.15)};
+    --color-accent-shadow-button: #{rgba(map.get($theme, "defaultShadow"), 0.5)};
+    --color-accent-shadow-button-hover: #{rgba(
+            map.get($theme, "defaultShadow"),
+            0.9
+        )};
+    --color-accent-shadow-hover: #{rgba(map.get($theme, "defaultShadow"), 0.75)};
+    --color-accent-shadow-profile: #{rgba(
+            map.get($theme, "defaultShadow"),
+            0.25
+        )};
     --color-background: #{map.get($theme, "background")};
     --color-background-secondary: #{lighten(map.get($theme, "background"), 1)};
     --color-background-glass: #{rgba(map.get($theme, "background"), 0.9)};
@@ -74,7 +82,7 @@ $aboutCVShadow: 0 0 15px 0 var(--color-accent-shadow-profile);
 
     --color-notice: #{rgba(map.get($theme, "accent"), 0.15)};
 
-    --color-cv-edu: #{map.get($theme, "blue")};
+    --color-cv-edu: #{map.get($theme, "purple")};
 
     @media (prefers-color-scheme: light) {
         --color-background: #{map.get($theme-light, "background")};
@@ -99,7 +107,7 @@ $aboutCVShadow: 0 0 15px 0 var(--color-accent-shadow-profile);
                 0.25
             )};
         --color-text: #{map.get($theme-light, "text")};
-        --color-accent-shadow: #{rgba(map.get($theme, "accent"), 0.3)};
+        --color-accent-shadow: #{rgba(map.get($theme, "defaultShadow"), 0.3)};
         --color-fake-link: #{map.get($theme-light, "blue")};
 
         --color-skill-1: #{map.get($theme-light, "red")};
@@ -113,23 +121,22 @@ $aboutCVShadow: 0 0 15px 0 var(--color-accent-shadow-profile);
 }
 
 @mixin homeBg {
-    background: linear-gradient(45deg, #000850 0%, #000320 100%),
-        radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
-        linear-gradient(225deg, #ff7a00 0%, #000000 100%),
+    background: radial-gradient(100% 225% at 100% 0%, #ff0000 0%, #000000 100%),
+        linear-gradient(236deg, #00c2ff 0%, #000000 100%),
         linear-gradient(
             135deg,
-            #cdffeb 10%,
-            #cdffeb 35%,
-            #009f9d 35%,
+            #cdffeb 0%,
+            #cdffeb 36%,
+            #009f9d 36%,
             #009f9d 60%,
             #07456f 60%,
             #07456f 67%,
             #0f0a3c 67%,
             #0f0a3c 100%
         );
-    background-blend-mode: screen, overlay, hard-light, normal;
+    background-blend-mode: overlay, hard-light, normal;
 
-   /*background: linear-gradient(to bottom, rgba(black, 0.35), transparent 70px),
+    /*background: linear-gradient(to bottom, rgba(black, 0.35), transparent 70px),
         radial-gradient(circle at center, #00000063, transparent 600px),
         radial-gradient(
             circle at top right,

@@ -1,0 +1,12 @@
+{
+    "urlname": "projectx",
+    "lang": "de",
+    "name": "ProjectX",
+    "shortDescription": "Minecraft Forge Server Netzwerk Software",
+    "links": {
+        "website": null,
+        "github": null
+    },
+    "image": "../images/dell_poweredge.jpg",
+    "date": "20160515T102100.000+0100"
+}

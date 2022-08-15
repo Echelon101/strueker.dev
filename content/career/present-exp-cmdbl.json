@@ -1,0 +1,21 @@
+{
+    "type": "job-experience",
+    "title": {
+        "en": "CMDBL-IT-Services GmbH",
+        "de": "CMDBL-IT-Serivces GmbH"
+    },
+    "sortDate": "2022-08-01 00:00",
+    "startDate": {
+        "en": "August 2022",
+        "de": "August 2022"
+    },
+    "endDate": {
+        "en": "present",
+        "de": "Jetzt"
+    },
+    "description": {
+        "en": "Shareholder and IT System Administrator",
+        "de": "Gesellschafter und IT Systemadministrator"
+    },
+    "externalLink": "https://cmdbl.cc/"
+}

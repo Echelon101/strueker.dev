@@ -1,0 +1,21 @@
+{
+    "type": "education",
+    "title": {
+        "en": "Comenius-Schule",
+        "de": "Comenius-Schule (Regionalschule)"
+    },
+    "sortDate": "2016-06-01 00:00",
+    "startDate": {
+        "en": "August 2010",
+        "de": "August 2010"
+    },
+    "endDate": {
+        "en": "June 2016",
+        "de": "Juni 2016"
+    },
+    "description": {
+        "de": "Realschulabschluss",
+        "en": "secondary school certificate"
+    },
+    "externalLink": "https://www.csquickborn.de/"
+}

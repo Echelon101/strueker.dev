@@ -1,0 +1,12 @@
+{
+    "urlname": "strueker-dev",
+    "lang": "en",
+    "name": "Strueker.dev",
+    "shortDescription": "This site and the code behind the scenes.",
+    "links": {
+        "website": "https://strueker.dev",
+        "github": "https://github.com/echelon101/strueker.dev"
+    },
+    "image": "../images/strueker.dev.jpg",
+    "date": "20201225T102100.000+0200"
+}

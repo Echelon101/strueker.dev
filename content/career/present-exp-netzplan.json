@@ -1,0 +1,21 @@
+{
+    "type": "job-experience",
+    "title": {
+        "en": "netzplan GmbH",
+        "de": "netzplan GmbH"
+    },
+    "sortDate": "2021-12-31 00:00",
+    "startDate": {
+        "en": "August 2019",
+        "de": "August 2019"
+    },
+    "endDate": {
+        "en": "present",
+        "de": "Jetzt"
+    },
+    "description": {
+        "en": "IT System Administrator (Customer Service)",
+        "de": "IT Systemadministrator (Customer Service)"
+    },
+    "externalLink": "https://www.netzplan.de/"
+}

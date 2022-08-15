@@ -147,6 +147,7 @@ const BlogListing = ({ data, pageContext }) => {
     );
 };
 
+/*
 export const query = graphql`
     query ($language: String!, $skip: Int!, $limit: Int!, $section: String) {
         posts: allFile(
@@ -191,5 +192,6 @@ export const query = graphql`
         }
     }
 `;
+*/
 
 export default BlogListing;

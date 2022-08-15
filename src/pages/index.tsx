@@ -13,11 +13,11 @@ import anime from "animejs";
 import {
     ArrowRight,
     AtSign,
-    Camera,
+    //Camera,
     Github,
     Mail,
     MapPin,
-    Phone,
+    //Phone,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@react-hook/media-query";
@@ -104,10 +104,10 @@ const IndexPage = (props) => {
 
     return (
         <Layout
-            title="Kevin Kandlbinder"
+            title="Timo Strüker"
             transparentTopbar={true}
             description={t("site.description")}
-            image={"/owner.jpg"}
+            image={"/timo.jpg"}
             speakable={{
                 "@type": "SpeakableSpecification",
                 xPath: ["article"],
@@ -121,13 +121,11 @@ const IndexPage = (props) => {
                 <div className={styles.profile + " profile h-card"}>
                     <div className={styles.profileImage}>
                         <StaticImage
-                            src={
-                                "../../content/images/kevin-kandlbinder-04.jpg"
-                            }
+                            src={"../../content/images/timo.jpg"}
                             width={250}
                             height={350}
                             placeholder="blurred"
-                            alt="Kevin Kandlbinder"
+                            alt="Timo Strüker"
                             className={"u-photo"}
                         ></StaticImage>
                     </div>
@@ -137,7 +135,7 @@ const IndexPage = (props) => {
                             <Trans>home.hello</Trans>
                         </span>
                         <span className={styles.name + " p-name"}>
-                            Kevin Kandlbinder
+                            Timo Strüker
                         </span>
                         <span className={styles.description}>
                             <Trans>home.me</Trans>{" "}
@@ -148,14 +146,14 @@ const IndexPage = (props) => {
                         </span>
 
                         <div className={styles.contactLinks}>
-                            <a
+                            {/*<a
                                 className={styles.contactLink + " p-tel"}
                                 href={"tel:" + meta.contactPhone}
                                 rel="me"
                             >
                                 <Phone width={20} />
                                 {meta.contactPhone}
-                            </a>
+                            </a>*/}
                             <a
                                 className={styles.contactLink + " u-email"}
                                 href={"mailto:" + meta.contactEmail}
@@ -227,7 +225,7 @@ const IndexPage = (props) => {
                     </Link>
                 </div>
             </section>
-            <a
+            {/*<a
                 className={styles.creditSection}
                 href="https://unsplash.com/@jannikkiel"
                 target="_blank"
@@ -239,7 +237,7 @@ const IndexPage = (props) => {
                     </span>
                     <ArrowRight />
                 </div>
-            </a>
+            </a>*/}
         </Layout>
     );
 };

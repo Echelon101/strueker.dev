@@ -14,7 +14,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const projectTemplate = path.resolve(`src/templates/project.tsx`);
 
-    const result = await graphql(`
+    /*const result = await graphql(`
         query AllPagesQuery {
             allProjectsJson {
                 nodes {
@@ -22,7 +22,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     urlname
                 }
             }
-
             blog: allFile(
                 filter: {
                     sourceInstanceName: { eq: "blogContent" }
@@ -43,6 +42,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                             published(formatString: "YYYY/MM")
                         }
                     }
+                }
+            }
+            
+        }
+    `);*/
+
+    const result = await graphql(`
+        query AllPagesQuery {
+            allProjectsJson {
+                nodes {
+                    lang
+                    urlname
                 }
             }
         }

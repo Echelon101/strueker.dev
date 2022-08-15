@@ -1,53 +1,11 @@
 [
     {
-        "name": "Gatsby",
-        "href": "https://gatsbyjs.com/",
-        "type": "framework"
-    },
-    {
-        "name": "React",
-        "href": "https://reactjs.org/",
-        "type": "framework"
-    },
-    {
-        "name": "NodeJS",
-        "href": "https://nodejs.org/",
-        "type": "framework"
-    },
-    {
         "name": "Symfony",
-        "href": "https://symfony.com/",
-        "type": "framework"
-    },
-    {
-        "name": "GoLang",
-        "href": "https://golang.org/",
-        "type": "language"
-    },
-    {
-        "name": "TypeScript",
-        "href": "https://www.typescriptlang.org/",
-        "type": "language"
-    },
-    {
-        "name": "JavaScript",
-        "type": "language"
+        "type": "framework",
+        "href": "https://symfony.com/"
     },
     {
         "name": "HTML",
-        "type": "language"
-    },
-    {
-        "name": "SCSS / Sass",
-        "href": "https://sass-lang.com/",
-        "type": "language"
-    },
-    {
-        "name": "CSS",
-        "type": "language"
-    },
-    {
-        "name": "RegEx",
         "type": "language"
     },
     {
@@ -55,17 +13,29 @@
         "type": "language"
     },
     {
+        "name": "MySQL",
+        "type": "language"
+    },
+    {
+        "name": "C#",
+        "type": "language"
+    },
+    {
         "name": "PHP",
         "type": "language"
     },
     {
-        "name": "Cloudflare Workers",
-        "href": "https://workers.cloudflare.com/",
-        "type": "platform"
+        "name": "Powershell",
+        "type": "language"
     },
     {
         "name": "Cloudflare Pages",
         "href": "https://pages.cloudflare.com/",
+        "type": "platform"
+    },
+    {
+        "name": "Microsoft M365",
+        "href": "https://office.com",
         "type": "platform"
     },
     {
@@ -88,30 +58,6 @@
         "type": "os"
     },
     {
-        "name": "Docker",
-        "href": "https://www.docker.com/",
-        "type": "program"
-    },
-    {
-        "name": "Yarn",
-        "href": "https://yarnpkg.com/",
-        "type": "program"
-    },
-    {
-        "name": "NPM",
-        "href": "https://www.npmjs.com/",
-        "type": "program"
-    },
-    {
-        "name": "MySQL",
-        "type": "program"
-    },
-    {
-        "name": "MongoDB",
-        "href": "https://www.mongodb.com/",
-        "type": "program"
-    },
-    {
         "name": "JetBrains IDEs",
         "href": "https://www.jetbrains.com/",
         "type": "program"
@@ -122,12 +68,13 @@
         "type": "program"
     },
     {
-        "name": "LibreOffice",
-        "href": "https://libreoffice.org/",
+        "name": "Docker",
+        "href": "https://www.docker.com/",
         "type": "program"
     },
     {
         "name": "Microsoft Office",
+        "href": "https://office.com",
         "type": "program"
     }
 ]
