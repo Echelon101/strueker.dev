@@ -55,6 +55,7 @@
     },
     {
         "name": "Microsoft Windows",
+        "href": "https://microsoft.com/windows",
         "type": "os"
     },
     {
@@ -75,6 +76,11 @@
     {
         "name": "Microsoft Office",
         "href": "https://office.com",
+        "type": "program"
+    },
+    {
+        "name": "Rancher",
+        "href": "https://rancher.com/",
         "type": "program"
     }
 ]

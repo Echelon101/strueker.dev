@@ -1,0 +1,20 @@
+{
+    "type": "job-experience",
+    "title": {
+        "en": "Timo Strüker",
+        "de": "Timo Strüker"
+    },
+    "sortDate": "2022-08-15 00:00",
+    "startDate": {
+        "en": "August 2022",
+        "de": "August 2022"
+    },
+    "endDate": {
+        "en": "present",
+        "de": "Jetzt"
+    },
+    "description": {
+        "en": "Freelance gameplay developer for Minecraft Marketplace content",
+        "de": "Selbstständinger Entwickler für Minecraft Marketplace Inhalte"
+    }
+}
