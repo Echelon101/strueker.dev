@@ -98,8 +98,8 @@ function SEO({
             <script
                 async
                 defer
-                data-domain="kevink.dev"
-                src="https://analytics.kevink.dev/js/plausible.js"
+                data-domain="strueker.dev"
+                src="https://tracking.strueker.net/js/script.js"
             ></script>
 
             {image && [
