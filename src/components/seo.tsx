@@ -99,7 +99,7 @@ function SEO({
                 async
                 defer
                 data-domain="strueker.dev"
-                src="https://tracking.strueker.net/js/script.js"
+                src="https://analytics.strueker.net/js/script.js"
             ></script>
 
             {image && [
