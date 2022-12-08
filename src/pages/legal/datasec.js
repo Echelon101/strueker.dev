@@ -46,18 +46,18 @@ export default function DataSecPage() {
                     <h3 id="dsg-general-controller">Verantwortlicher</h3>
                     <p>
                         <span className="tsmcontroller">
-                            Kevin Kandlbinder
+                            Timo Strüker
                             <br />
-                            Eichenweg 48
+                            Meister-Francke-Straße 22
                             <br />
-                            25451 Quickborn
+                            22309 Hamburg
                             <br />
                             Deutschland
                             <br />
                             <br />
-                            E-Mail: contact@kevink.dev
+                            E-Mail: developer@strueker.net
                             <br />
-                            Impressum: https://kevink.dev/legal/about
+                            Impressum: https://strueker.dev/legal/about
                         </span>
                     </p>
                     <h3 id="dsg-general-datatype">
