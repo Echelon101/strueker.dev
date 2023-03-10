@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-undef
 module.exports = {
     siteName: "Strueker.dev",
-    siteAuthor: "@timomrx",
+    siteAuthor: "@OmenDarkly_",
     siteURL: "https://strueker.dev",
     modules: {
         blog: false,
@@ -34,6 +34,6 @@ module.exports = {
         "https://echelon101.net",
         "https://omendarkly.net",
         "https://strueker.net",
-        "https://twitter.com/@timomrx",
+        "https://twitter.com/OmenDarkly_",
     ],
 };
