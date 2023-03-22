@@ -1,0 +1,21 @@
+{
+    "type": "job-experience",
+    "title": {
+        "en": "GHD GesundHeits GmbH Deutschland",
+        "de": "GHD GesundHeits GmbH Deutschland"
+    },
+    "sortDate": "2023-04-01 00:00",
+    "startDate": {
+        "en": "April 2023",
+        "de": "April 2023"
+    },
+    "endDate": {
+        "en": "present",
+        "de": "Jetzt"
+    },
+    "description": {
+        "en": "IT Administrator",
+        "de": "IT Administrator"
+    },
+    "externalLink": "https://www.gesundheitsgmbh.de/"
+}
