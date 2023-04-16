@@ -225,7 +225,7 @@ const IndexPage = (props) => {
                     </Link>
                 </div>
             </section>
-            {/*<a
+            <a
                 className={styles.creditSection}
                 href="https://unsplash.com/@jannikkiel"
                 target="_blank"
@@ -237,7 +237,7 @@ const IndexPage = (props) => {
                     </span>
                     <ArrowRight />
                 </div>
-            </a>*/}
+            </a>
         </Layout>
     );
 };
