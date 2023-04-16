@@ -13,7 +13,7 @@ import anime from "animejs";
 import {
     ArrowRight,
     AtSign,
-    //Camera,
+    Camera,
     Github,
     Mail,
     MapPin,
