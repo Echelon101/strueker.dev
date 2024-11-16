@@ -1,27 +1,6 @@
 [
     {
-        "name": "Symfony",
-        "type": "framework",
-        "href": "https://symfony.com/"
-    },
-    {
-        "name": "HTML",
-        "type": "language"
-    },
-    {
-        "name": "Java",
-        "type": "language"
-    },
-    {
         "name": "MySQL",
-        "type": "language"
-    },
-    {
-        "name": "C#",
-        "type": "language"
-    },
-    {
-        "name": "PHP",
         "type": "language"
     },
     {
@@ -79,8 +58,8 @@
         "type": "program"
     },
     {
-        "name": "Rancher",
-        "href": "https://rancher.com/",
+        "name": "Kubernetes K3s",
+        "href": "https://k3s.io",
         "type": "program"
     }
 ]
