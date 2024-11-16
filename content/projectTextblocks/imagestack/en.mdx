@@ -1,0 +1,12 @@
+# About My photo management system
+
+The system is built on four k3s nodes that run a number of containers that help me manage my photo collection
+
+Stack:
+ - Syncthing (ingest of image files)
+ - multiple [photorism](https://photoprism.app) instances
+    - Archive (All raw and jpg files)
+    - Storage (Curated jpg files)
+    - Family (Curated jpg files from my parents)
+    - Other (Curated jpg files from friends)
+ - an [Immich](https://immich.app) instance to perform face recognition and have a pleasing frontend

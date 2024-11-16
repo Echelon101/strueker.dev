@@ -1,0 +1,13 @@
+{
+    "urlname": "imagestack",
+    "lang": "de",
+    "name": "Foto Managment System",
+    "shortDescription": "Management System für Bilder auf Kubernetes",
+    "links": {
+        "website": null,
+        "github": null
+    },
+    "image": "../images/CMDBL-ProjectScreen.png",
+    "featured": 0,
+    "date": "20241001T200001.000+0200"
+}
