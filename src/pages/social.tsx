@@ -5,7 +5,6 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import * as styles from "./social.module.scss";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
     query AllSocialsQuery($language: String!) {
@@ -14,15 +13,7 @@ export const query = graphql`
                 platformHandle
                 platformName
                 url
-                localImage {
-                    childImageSharp {
-                        gatsbyImageData(
-                            height: 300
-                            width: 300
-                            placeholder: BLURRED
-                        )
-                    }
-                }
+                image
             }
         }
         locales: allLocale(filter: { language: { eq: $language } }) {
@@ -66,12 +57,12 @@ const SocialPage = ({ data }) => {
                                 >
                                     <div className={styles.socialImage}>
                                         <div className={styles.socialBg}>
-                                            <GatsbyImage
-                                                image={getImage(
-                                                    social.localImage
-                                                )}
+                                            <img
+                                                src={social.image}
                                                 alt={social.platformName}
-                                            ></GatsbyImage>
+                                                loading="lazy"
+                                                referrerPolicy="no-referrer"
+                                            />
                                         </div>
                                         <span className={styles.socialName}>
                                             {social.platformName}
