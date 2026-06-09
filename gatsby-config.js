@@ -127,6 +127,20 @@ module.exports = {
         `gatsby-plugin-remove-serviceworker`,
         `gatsby-plugin-eslint`,
         `gatsby-transformer-json`,
+        {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: "FriendsJson",
+                imagePath: "imageURL",
+            },
+        },
+        {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: "SocialsJson",
+                imagePath: "image",
+            },
+        },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-remark-images`,

@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import * as styles from "./friends.module.scss";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Globe2 } from "lucide-react";
 
 export const query = graphql`
@@ -14,7 +15,15 @@ export const query = graphql`
                 name
                 profession
                 url
-                imageURL
+                localImage {
+                    childImageSharp {
+                        gatsbyImageData(
+                            height: 300
+                            width: 300
+                            placeholder: BLURRED
+                        )
+                    }
+                }
             }
         }
         locales: allLocale(filter: { language: { eq: $language } }) {
@@ -64,12 +73,12 @@ const FriendsPage = ({ data }) => {
                                         }
                                     >
                                         <div className={styles.friendBg}>
-                                            <img
-                                                src={friend.imageURL}
+                                            <GatsbyImage
+                                                image={getImage(
+                                                    friend.localImage
+                                                )}
                                                 alt={friend.name}
-                                                loading="lazy"
-                                                referrerPolicy="no-referrer"
-                                            />
+                                            ></GatsbyImage>
                                         </div>
                                         <span
                                             className={styles.friendName}
