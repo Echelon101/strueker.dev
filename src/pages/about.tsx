@@ -23,7 +23,7 @@ import useSiteMetadata from "../helpers/useSiteMetadata";
 
 export const query = graphql`
     query GetProjectsAndSkills($language: String) {
-        allSkillsJson(sort: { fields: type, order: ASC }) {
+        allSkillsJson(sort: { type: ASC }) {
             nodes {
                 name
                 type
@@ -32,7 +32,7 @@ export const query = graphql`
         }
         allProjectsJson(
             filter: { lang: { eq: $language }, featured: { gte: 0 } }
-            sort: { fields: featured, order: ASC }
+            sort: { featured: ASC }
         ) {
             nodes {
                 lang
@@ -71,7 +71,7 @@ export const query = graphql`
             name
         }
 
-        career: allCareerJson(sort: { order: DESC, fields: sortDate }) {
+        career: allCareerJson(sort: { sortDate: DESC }) {
             nodes {
                 id
                 type

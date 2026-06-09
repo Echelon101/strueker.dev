@@ -91,6 +91,7 @@ if (extConfig.modules.blog) {
 }
 
 module.exports = {
+    trailingSlash: "never",
     siteMetadata: {
         title: extConfig.siteName,
         author: extConfig.siteAuthor,
@@ -239,6 +240,7 @@ module.exports = {
                 defaultLanguage: `en`,
                 generateDefaultLanguagePage: true,
                 siteUrl: extConfig.siteURL,
+                trailingSlash: "never",
                 i18nextOptions: {
                     interpolation: {
                         escapeValue: false, // not needed for react as it escapes by default
@@ -258,12 +260,6 @@ module.exports = {
                         excludeLanguages: extConfig.languages,
                     },
                 ],
-            },
-        },
-        {
-            resolve: `gatsby-plugin-netlify`,
-            options: {
-                generateMatchPathRewrites: false,
             },
         },
         ...dynamicPlugins,

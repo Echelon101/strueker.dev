@@ -12,7 +12,7 @@ export const query = graphql`
     query GetProjects($language: String) {
         allProjectsJson(
             filter: { lang: { eq: $language } }
-            sort: { fields: date, order: DESC }
+            sort: { date: DESC }
         ) {
             nodes {
                 lang

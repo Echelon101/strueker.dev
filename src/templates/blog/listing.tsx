@@ -158,7 +158,7 @@ export const query = graphql`
                     frontmatter: { section: { eq: $section } }
                 }
             }
-            sort: { fields: childMdx___frontmatter___published, order: DESC }
+            sort: { childMdx: { frontmatter: { published: DESC } } }
             limit: $limit
             skip: $skip
         ) {
