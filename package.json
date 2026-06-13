@@ -10,8 +10,8 @@
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",
-        "build": "gatsby build",
-        "build:pages": "gatsby build",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+        "build:pages": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
         "deploy:pages": "npx wrangler pages deploy public",
         "prettier": "npx prettier --write .",
         "serve": "gatsby serve",
