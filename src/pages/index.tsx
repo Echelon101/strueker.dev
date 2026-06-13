@@ -8,7 +8,6 @@ import { Trans, Link } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-import anime from "animejs";
 
 import {
     ArrowRight,
@@ -69,35 +68,45 @@ const IndexPage = (props) => {
         if (typeof window === "undefined") return;
         if (reduceMotion) return;
 
-        anime({
-            targets: [
-                "." + styles.profileCard + " > span",
-                "." + styles.profileCard + " a",
-            ],
-            opacity: [0, 1],
-            translateX: [100, 0],
-            duration: 250,
-            delay: anime.stagger(20),
-            easing: "easeInOutCirc",
-        });
-        anime({
-            targets: ["." + styles.profileImageDummy],
-            translateX: [0, -3],
-            translateY: [0, 3],
-            duration: 250,
-            easing: "easeInOutCirc",
-        });
-        anime({
-            targets: ["." + styles.profileImage],
-            translateX: [0, 4],
-            translateY: [0, -4],
-            duration: 250,
-            easing: "easeInOutCirc",
+        let cancelled = false;
+
+        import("animejs").then(({ default: anime }) => {
+            if (cancelled) return;
+
+            anime({
+                targets: [
+                    "." + styles.profileCard + " > span",
+                    "." + styles.profileCard + " a",
+                ],
+                opacity: [0, 1],
+                translateX: [100, 0],
+                duration: 250,
+                delay: anime.stagger(20),
+                easing: "easeInOutCirc",
+            });
+            anime({
+                targets: ["." + styles.profileImageDummy],
+                translateX: [0, -3],
+                translateY: [0, 3],
+                duration: 250,
+                easing: "easeInOutCirc",
+            });
+            anime({
+                targets: ["." + styles.profileImage],
+                translateX: [0, 4],
+                translateY: [0, -4],
+                duration: 250,
+                easing: "easeInOutCirc",
+            });
+
+            /*if (typeof window !== "undefined")
+                // eslint-disable-next-line no-undef
+                window.setTimeout(loadTsParticles, 1000);*/
         });
 
-        /*if (typeof window !== "undefined")
-            // eslint-disable-next-line no-undef
-            window.setTimeout(loadTsParticles, 1000);*/
+        return () => {
+            cancelled = true;
+        };
     }, [reduceMotion]);
 
     let meta = props.data.site.siteMetadata;
