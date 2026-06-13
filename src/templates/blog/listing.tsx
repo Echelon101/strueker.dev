@@ -44,7 +44,7 @@ const BlogListing = ({ data, pageContext }) => {
                                     <div className={styles.sectionImage}>
                                         <div className={styles.sectionBg}>
                                             <StaticImage
-                                                src="https://source.unsplash.com/gf8e6XvG_3E/300x150"
+                                                src="https://images.unsplash.com/photo-1773332585698-cba3c91b73e4?q=80&w=300&auto=format&fit=crop"
                                                 alt={t(
                                                     "blog.section.scambox.name"
                                                 )}
